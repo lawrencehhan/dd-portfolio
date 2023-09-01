@@ -1,0 +1,167 @@
+.intro-container {
+  position: relative;
+  height: 507px;
+  width: 100%;
+  margin-top: 112px;
+  display: flex;
+  border: solid 1.2px black;
+}
+.intro-container .intro-col {
+  width: 50%;
+  border: solid 1.2px blue;
+  display: flex;
+  align-items: center;
+}
+.intro-container .intro-col-pp {
+  justify-content: center;
+}
+.intro-container .intro-col-blurb .textbox {
+  height: 234px;
+  width: 549px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  border: solid 1px green;
+}
+.intro-container .intro-col-blurb .textbox .btn-portfolio {
+  height: 40px;
+  width: 161px;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2B3A55;
+  color: #F2E5E5;
+  font-family: var(--font-montserrat);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.intro-container .home-col {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 90%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.intro-container .home-col .home-text {
+  width: 100%;
+}
+.intro-container .home-col .home-text .letter {
+  display: inline-flex;
+}
+.intro-container .home-col .home-text-title {
+  font-size: 3.75rem;
+}
+.intro-container .home-col .home-text-title .letter {
+  margin-right: 0.05rem;
+}
+.intro-container .home-col .home-text-intro {
+  font-size: 2rem;
+  font-family: "Source Sans Pro";
+  margin-left: 8%;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.intro-container .home-col .home-text-intro .highlightBox {
+  content: "";
+  position: absolute;
+  height: 1.875rem;
+  width: 32%;
+  margin-top: 0.75rem;
+  background-image: linear-gradient(-120deg, #e0afa01d, #b4d5fe92 95%, #88d4984f);
+  border-radius: 1rem 0 1rem 0;
+  padding: 3px 6px;
+  z-index: 0;
+}
+.intro-container .home-col .home-text-intro > * {
+  z-index: 100;
+}
+.intro-container .home-col .home-text-passage {
+  font-size: 1rem;
+  font-family: "Vazirmatn";
+  width: 65%;
+  margin-left: 15%;
+}
+.intro-container .home-profile {
+  height: 70%;
+}
+.intro-container .home-profile .svg-circle {
+  position: absolute;
+}
+.intro-container .home-profile .profile-img {
+  position: absolute;
+  opacity: 0.75;
+  z-index: 500;
+}
+.intro-container .home-profile .svg-disk {
+  position: absolute;
+  bottom: 0;
+}
+.intro-container .bg {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 40%;
+  z-index: 508;
+}
+
+.home-container.dark {
+  border: solid 1.2px white;
+}
+
+@media only screen and (min-width: 0rem) and (max-width: 42rem) {
+  .home-container {
+    margin-top: 4vh;
+    height: 80vh;
+    overflow: hidden;
+  }
+  .home-container .svg-waveLine {
+    display: none;
+  }
+  .home-container .home-col {
+    width: 100%;
+    height: 40vh;
+  }
+  .home-container .home-col .profile-img {
+    width: 50%;
+  }
+  .home-container .home-col .svg-circle {
+    opacity: 0.5;
+    width: 50%;
+  }
+  .home-container .home-col .svg-disk {
+    padding-bottom: 2%;
+    width: 50%;
+  }
+  .home-container .home-text-col {
+    align-content: flex-start;
+    text-align: center;
+    padding-top: 2vh;
+  }
+  .home-container .home-text-col .home-text-title {
+    font-size: 2rem;
+  }
+  .home-container .home-text-col .home-text-intro {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+  }
+  .home-container .home-text-col .home-text-intro .highlightBox {
+    height: 1rem;
+    width: 32%;
+    margin-top: 0.25rem;
+  }
+  .home-container .home-text-col .home-text-passage {
+    margin-left: 0;
+    font-size: 0.75rem;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
