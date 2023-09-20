@@ -33,6 +33,7 @@ body {
     overflow: hidden;
     position: fixed;
     position: -webkit-fixed;
+    z-index: 100;
     display: inline-flex;
     align-items: center;
     justify-content: right;
@@ -50,8 +51,14 @@ body {
             font-weight: 700;
             text-align: center;
             font-size: 20px;
+            color: $neutrals-900;
             line-height: 140%;
             text-transform: uppercase;
+            text-decoration: none;
+        }
+        .active-nav {
+            color: $primary-500;
+            text-decoration: underline;
         }
         .nav-item-contact {
             padding-right: 107px;
@@ -63,7 +70,7 @@ body {
             height: 1.5px;
             width: 0%;
             // left: 5%;
-            background-color: black;
+            background-color: #FCF7FF;
             opacity: 1;
             transition: all 0.4s ease-in-out;
         }
@@ -80,6 +87,16 @@ body {
       position: absolute;
       left: 40px;
     }
+  }
+  .footer {
+    width: 100%;
+    height: 121px;
+    background-color: #C4CEDF;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
   }
 }
 
@@ -113,6 +130,7 @@ body {
     color: $neutrals-500;
     font-size: 32px;
     text-transform: uppercase;
+    line-height: 130%;
 }
 .text-heading-s {
     @include text-heading;
@@ -161,5 +179,54 @@ body {
   
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
-
+    .navbar {
+        // padding-right: 0px;
+        .burger-svg {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            right: 39px;
+            align-self: center;
+            z-index: 10;
+        }
+        li {
+            .nav-item {
+                padding-right: 25px;
+                font-family: var(--font-montserrat);
+                font-style: normal;
+                font-weight: 700;
+                text-align: center;
+                font-size: 20px;
+                line-height: 140%;
+                text-transform: uppercase;
+            }
+            .nav-item-contact {
+                padding-right: 107px;
+            }
+            a::after {
+                content: "";
+                position: absolute;
+                top: 115%;
+                height: 1.5px;
+                width: 0%;
+                background-color: #FCF7FF;
+                opacity: 1;
+                transition: all 0.4s ease-in-out;
+            }
+            &:hover {
+                cursor: pointer;
+                color: $primary-500;
+                a::after {
+                width: 85%;
+                transition: 0.4s ease-in-out;
+                }
+            }
+        }
+        .li-home {
+            position: absolute;
+            left: 40px;
+        }
+    }
 }

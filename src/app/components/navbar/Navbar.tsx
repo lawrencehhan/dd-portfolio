@@ -1,9 +1,18 @@
+'use-client'
+
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Logo from '../../assets/logo.png';
 import Burger from './Burger';
 import NavbarMobile from './NavbarMobile';
+
 interface Navbar {
+    navLinks: {
+        name: string;
+        href:string
+    }[];
     darkMode: boolean;
     isMobile: boolean;
     isOpen: boolean;
@@ -12,7 +21,22 @@ interface Navbar {
 }
 
 export default function Navbar(props:Navbar) {
-    const {darkMode, isMobile, isOpen, handleOpen, handleDarkToggle} = props;
+    const {navLinks, darkMode, isMobile, isOpen, handleOpen, handleDarkToggle} = props;
+    
+        // {navLinks.map((link) => {
+    //     const isActive = pathname === link.href
+ 
+    //     return (
+    //       <Link
+    //         className={isActive ? 'text-blue' : 'text-black'}
+    //         href={link.href}
+    //         key={link.name}
+    //       >
+    //         {link.name}
+    //       </Link>
+    //     )
+    //   })}
+    
     const navbarVariants = {
         hidden: {opacity: 0.42 },
         visible: {
@@ -63,6 +87,22 @@ export default function Navbar(props:Navbar) {
         }
     }
 
+    const pathname = usePathname();
+    const links = navLinks.map((link) => {
+            const isActive = pathname === link.href
+
+            return (
+                <motion.li  initial="hidden" animate="visible" exit="hide" variants={liVariants} key="nav-home">
+                    <Link
+                        className={isActive ? 'active-nav nav-item' : 'nav-item'}
+                        href={link.href}
+                        key={link.name}
+                    >
+                        {link.name}
+                    </Link>
+                </motion.li>
+            )
+        })
 
     return (
             <motion.ul className={`navbar ${darkMode && "dark"}`}
@@ -84,25 +124,12 @@ export default function Navbar(props:Navbar) {
                                     alt="Logo"
                                     width={145}
                                     height={111}
+                                    className="home-logo"
                                 />
                             </a>
                     </motion.li>     
-                    {!isMobile && 
-                        <motion.li  initial="hidden" animate="visible" exit="hide" variants={liVariants} key="nav-home">
-                            <a className="nav-item">home</a>
-                        </motion.li>
-                    }
                     {/* Standard Navbar LIs */}
-                    {!isMobile && 
-                        <motion.li  initial="hidden" animate="visible" exit="hide" variants={liVariants} key="nav-work">
-                            <a className="nav-item">work</a>
-                        </motion.li>
-                    }
-                    {!isMobile &&
-                        <motion.li initial="hidden" animate="visible" exit="hide" variants={liVariants} key="nav-contact">
-                            <a className="nav-item nav-item-contact">contact</a>
-                        </motion.li>
-                    }
+                    {!isMobile && links}
                     {/* Burger SVG for Mobile */}
                     {isMobile &&           
                         <Burger 

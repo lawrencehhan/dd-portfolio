@@ -56,7 +56,7 @@ export default function Burger(props:NavbarBurger) {
     }
     // Burger Line Props
     const burgerProps = {
-        stroke: darkMode ? "#FCF7FF" : "#2A2B2A",
+        stroke: "#CE7777",
         strokeWidth: 2,
         vectorEffect: "non-scaling-stroke",
         initial: "closed",

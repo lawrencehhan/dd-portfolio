@@ -1,0 +1,109 @@
+$primary-100: #F2E5E5;
+$primary-300: #E8C4C4;
+$accent-500: #2B3A55;
+@mixin underline {
+    position: absolute;
+    border-radius: 5px;
+    bottom: -6px;
+    right: 0;
+    height: 5px;
+    width: 122px;
+    background: #CE7777;
+}
+
+.work-header {
+    position: relative;
+    // height: 507px;// change back to 100% later
+    width: 100%; 
+    margin-top: 112px;
+    display: flex-wrap;
+    flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: center;
+    border: solid 1.2px black;
+    .title {
+        margin-top: 81px;
+        margin-left: 128px;
+        color: #1B2536; // Figma labeled as neturals-900 but actual col diff
+    }
+    .work-filters {
+        width: 517px;
+        height: 45px;
+        margin-top: 38px;
+        margin-left: 128px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 92px;
+        border: solid 1px black;
+        li {
+            display: inline-block;
+            position: relative;
+            color: #1B2536;
+            cursor: pointer;
+            .all-underline {
+                @include underline;
+                left: -40px;
+            }
+            .design-underline {
+                @include underline;
+                left: -16px;
+            }
+            .development-underline {
+                @include underline;
+                left: 25px;
+            }
+        }
+        .selected {
+            color: #CE7777;
+        }
+    }
+
+
+
+
+
+    .intro-col {
+        width: 50%;
+        border: solid 1.2px blue;
+        display: flex;
+        align-items: center;
+        &-media {
+            justify-content: center;
+        }
+        &-blurb {
+            .textbox {
+                height: 234px;
+                width: 549px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content:space-between;
+                border: solid 1px green;
+                .btn-portfolio {
+                    // display: flex;
+                    height: 40px;
+                    width: 161px;
+                    padding: 15px;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $accent-500;
+                    color: $primary-100;
+                    font-family: var(--font-montserrat);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+   
+}
+    
