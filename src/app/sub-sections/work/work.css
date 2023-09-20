@@ -1,0 +1,100 @@
+.work-header {
+  position: relative;
+  width: 100%;
+  margin-top: 112px;
+  display: flex-wrap;
+  flex-wrap: wrap;
+  border: solid 1.2px black;
+}
+.work-header .title {
+  margin-top: 81px;
+  margin-left: 128px;
+  color: #1B2536;
+}
+.work-header .work-filters {
+  width: 517px;
+  height: 45px;
+  margin-top: 38px;
+  margin-left: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 92px;
+  border: solid 1px black;
+}
+.work-header .work-filters li {
+  display: inline-block;
+  position: relative;
+  color: #1B2536;
+  cursor: pointer;
+}
+.work-header .work-filters li .all-underline {
+  position: absolute;
+  border-radius: 5px;
+  bottom: -6px;
+  right: 0;
+  height: 5px;
+  width: 122px;
+  background: #CE7777;
+  left: -40px;
+}
+.work-header .work-filters li .design-underline {
+  position: absolute;
+  border-radius: 5px;
+  bottom: -6px;
+  right: 0;
+  height: 5px;
+  width: 122px;
+  background: #CE7777;
+  left: -16px;
+}
+.work-header .work-filters li .development-underline {
+  position: absolute;
+  border-radius: 5px;
+  bottom: -6px;
+  right: 0;
+  height: 5px;
+  width: 122px;
+  background: #CE7777;
+  left: 25px;
+}
+.work-header .work-filters .selected {
+  color: #CE7777;
+}
+.work-header .intro-col {
+  width: 50%;
+  border: solid 1.2px blue;
+  display: flex;
+  align-items: center;
+}
+.work-header .intro-col-media {
+  justify-content: center;
+}
+.work-header .intro-col-blurb .textbox {
+  height: 234px;
+  width: 549px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  border: solid 1px green;
+}
+.work-header .intro-col-blurb .textbox .btn-portfolio {
+  height: 40px;
+  width: 161px;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2B3A55;
+  color: #F2E5E5;
+  font-family: var(--font-montserrat);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Tablet and Smaller Desktop */
+
+/*# sourceMappingURL=work.css.map */

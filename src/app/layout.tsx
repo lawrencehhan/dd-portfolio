@@ -2,7 +2,9 @@
 import { useState, useEffect } from 'react';
 import './globals.css'
 import type { Metadata } from 'next'
+import NavLinks from './assets/navLinks';
 import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 import { Montserrat, Ovo } from 'next/font/google'
 
 // export const metadata: Metadata = {
@@ -40,16 +42,17 @@ export default function RootLayout({
   const [isMobile, setMobile] = useState<boolean>(false)
   useEffect(() => {
       // Listening for window resizing
-      if (window.innerWidth <= 700) {
+      if (window.innerWidth <= 1120) {
         setMobile(true)
       }
       window.addEventListener("resize", function() {
-        if (window.innerWidth <= 700) {
+        if (window.innerWidth <= 1120) {
             setMobile(true)
         } else {
           setMobile(false)
         }
       })
+      console.log(NavLinks[0])
   }, [])
 
   // Check to see if navbar Burger is open
@@ -61,14 +64,9 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazirmatn:400,200,100"></link> */}
-      {/* <body className={inter.className}>{children}</body> */}
       <body className={`${montserrat.variable} ${ovo.variable}`}>
         <Navbar 
+          navLinks={NavLinks}
           darkMode={darkMode} 
           isMobile={isMobile} 
           isOpen={isOpen} 
@@ -76,6 +74,9 @@ export default function RootLayout({
           handleDarkToggle={handleDarkToggle}
         />
         {children}
+        <Footer
+          darkMode={darkMode}
+        />
       </body>
     </html>
   )

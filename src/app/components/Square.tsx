@@ -5,16 +5,12 @@ interface Square {
     width: number;
     height: number;
     animated: boolean;
+    extraClass?: string;
 }
 
 export default function Square(props:Square) {
-    const {animated, color, width, height} = props;
+    const {animated, color, width, height, extraClass} = props;
     
-    // const strokeTransition = {
-    //     delay: 4,
-    //     duration: 5,
-    //     ease: [0.6, 0.01, -0.05, 0.95]
-    // };
     const squareTransition = {
         delay: 1,
         duration: 2,
@@ -30,7 +26,7 @@ export default function Square(props:Square) {
 
     
     return (
-        <motion.svg className="svg-rect-container" height={height} width={width}
+        <motion.svg className={`svg-rect-container ${extraClass ? extraClass : ''}`} height={height} width={width}
             viewBox={`0 0 ${width} ${height}`}
             initial="hidden"
             animate="visible"

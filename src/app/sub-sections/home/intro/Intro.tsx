@@ -8,7 +8,7 @@ import '../home.css';
 export default function Intro() {
     return (
         <div className='intro-container'>
-            <div className='intro-col intro-col-pp'>
+            <div className='intro-col intro-col-media'>
                 <Square color="#B5C3DC" width={466} height={355} animated={true}></Square>
             </div>
             <div className='intro-col intro-col-blurb'>
