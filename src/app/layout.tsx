@@ -40,7 +40,10 @@ export default function RootLayout({
 
   // Check for device width
   const [isMobile, setMobile] = useState<boolean>(false)
+  const [isFirstBoot, setIsFirstBoot] = useState<boolean>(true)
   useEffect(() => {
+      // Check for initial render
+      isFirstBoot && setIsFirstBoot(prevIsFirstBoot => !prevIsFirstBoot)
       // Listening for window resizing
       if (window.innerWidth <= 1120) {
         setMobile(true)
@@ -67,7 +70,8 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${ovo.variable}`}>
         <Navbar 
           navLinks={NavLinks}
-          darkMode={darkMode} 
+          darkMode={darkMode}
+          isFirstBoot={isFirstBoot} 
           isMobile={isMobile} 
           isOpen={isOpen} 
           handleOpen={handleOpen}

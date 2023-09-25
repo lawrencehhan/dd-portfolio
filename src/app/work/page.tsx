@@ -3,6 +3,7 @@ import {useState} from 'react';
 import {motion} from 'framer-motion';
 import { filterOptions, ProjectData } from '../assets/projectData';
 import WorkHeader from '../sub-sections/work/header/WorkHeader';
+import WorkBody from '../sub-sections/work/body/WorkBody';
 import '../sub-sections/work/work.css';
 
 export default function Work() {
@@ -18,9 +19,9 @@ export default function Work() {
         selectedFilter={selectedFilter} 
         handleFilterChange={handleFilterChange} 
       />
-      <div className='work-projects'>
-
-      </div>
+      <WorkBody 
+        selectedFilter={selectedFilter}
+      />
     </main>
   )
 }
