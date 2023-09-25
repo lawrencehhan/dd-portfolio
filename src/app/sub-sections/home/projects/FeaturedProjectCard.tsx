@@ -1,5 +1,5 @@
 import Square from '../../../components/Square';
-interface ProjectCard {
+interface FeaturedProjectCard {
     id: number;
     title: string;
     text: string;
@@ -7,7 +7,7 @@ interface ProjectCard {
     link?: string;
 }
 
-export default function ProjectCard(props:ProjectCard) {
+export default function FeaturedProjectCard(props:FeaturedProjectCard) {
     const {id, title, text} = props;
     return(
         <div className="project-card">

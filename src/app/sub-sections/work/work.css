@@ -1,3 +1,7 @@
+.page-work {
+  min-height: 100vh;
+}
+
 .work-header {
   position: relative;
   width: 100%;
@@ -61,38 +65,23 @@
 .work-header .work-filters .selected {
   color: #CE7777;
 }
-.work-header .intro-col {
-  width: 50%;
-  border: solid 1.2px blue;
-  display: flex;
-  align-items: center;
-}
-.work-header .intro-col-media {
-  justify-content: center;
-}
-.work-header .intro-col-blurb .textbox {
-  height: 234px;
-  width: 549px;
+
+.work-body {
+  position: relative;
+  margin-top: 83px;
+  margin-bottom: 55px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
-  border: solid 1px green;
-}
-.work-header .intro-col-blurb .textbox .btn-portfolio {
-  height: 40px;
-  width: 161px;
-  padding: 15px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: #2B3A55;
-  color: #F2E5E5;
-  font-family: var(--font-montserrat);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  border: solid 1.2px black;
+  background-color: blueviolet;
+  row-gap: 138px;
+}
+.work-body .project-card {
+  width: 400px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Tablet and Smaller Desktop */

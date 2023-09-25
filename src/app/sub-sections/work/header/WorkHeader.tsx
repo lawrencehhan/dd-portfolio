@@ -24,8 +24,6 @@ export default function WorkHeader(props:WorkHeader) {
             scale: 0.98,
         }
     }
-    console.log('in header file')
-    console.log(selectedFilter)
 
     return (
         <div className='work-header'>
@@ -47,22 +45,6 @@ export default function WorkHeader(props:WorkHeader) {
                                 ) : null}
                     </motion.li>  
                 ))}
-
-
-
-{/* 
-                          {tabs.map((item) => (
-            <li
-              key={item.label}
-              className={item === selectedTab ? "selected" : ""}
-              onClick={() => setSelectedTab(item)}
-            >
-              {`${item.icon} ${item.label}`}
-              {item === selectedTab ? (
-                <motion.div className="underline" layoutId="underline" />
-              ) : null}
-            </li>
-          ))} */}
             </ul>
       </div>
     )

@@ -14,6 +14,7 @@ interface Navbar {
         href:string
     }[];
     darkMode: boolean;
+    isFirstBoot: boolean;
     isMobile: boolean;
     isOpen: boolean;
     handleOpen: ()=>void;
@@ -21,7 +22,7 @@ interface Navbar {
 }
 
 export default function Navbar(props:Navbar) {
-    const {navLinks, darkMode, isMobile, isOpen, handleOpen, handleDarkToggle} = props;
+    const {navLinks, darkMode, isFirstBoot, isMobile, isOpen, handleOpen, handleDarkToggle} = props;
     
         // {navLinks.map((link) => {
     //     const isActive = pathname === link.href
@@ -118,7 +119,10 @@ export default function Navbar(props:Navbar) {
                         initial="hidden"
                         animate="visible"
                         variants={logoRefVariant}>
-                            <a className="nav-logo">
+                            <Link 
+                                className="nav-logo"
+                                href={'/'}
+                            >
                                 <Image 
                                     src={Logo}
                                     alt="Logo"
@@ -126,7 +130,7 @@ export default function Navbar(props:Navbar) {
                                     height={111}
                                     className="home-logo"
                                 />
-                            </a>
+                            </Link>
                     </motion.li>     
                     {/* Standard Navbar LIs */}
                     {!isMobile && links}
