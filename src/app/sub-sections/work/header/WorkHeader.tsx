@@ -36,7 +36,9 @@ export default function WorkHeader(props:WorkHeader) {
                         id={filter}
                         whileHover='hover'
                         variants={variants}
-                        onClick={(event) => handleFilterChange(event)}
+                        onClick={(event) => {
+                            handleFilterChange(event)
+                        }}
                         style={filter===selectedFilter ? {color:'#CE7777'}:{}}
                         >
                             {filter}

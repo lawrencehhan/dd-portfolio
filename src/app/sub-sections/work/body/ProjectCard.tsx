@@ -18,23 +18,31 @@ export default function ProjectCard(props:ProjectCard) {
           y: 0,
           opacity: 1,
           transition: {
-            ease: "easeOut",
+            ease: "easeInOut",
             duration: 1.2,
           }
         },
-        hide: {
-          opacity: 0,
-          y: 10,
-          transition: {
-            ease: "easeIn",
-            duration: 2,
-          }
-        }
     }
 
     return(
         <motion.div className="project-card"
             key={id}
+            exit={{
+                opacity: 0,
+                y: -20,
+                transition: {
+                  ease: "easeIn",
+                  duration: .5,
+                  delay: (id * 0.1),
+                }
+            }}
+            whileHover={{
+                scale: 1.01,
+                transition: { 
+                    duration: .4,
+                    ease: 'easeInOut',
+                }
+            }}
             variants={cardVariants}
         >
             <div className="card-image-container">
