@@ -12,8 +12,7 @@ export default function Square(props:Square) {
     const {animated, color, width, height, extraClass} = props;
     
     const squareTransition = {
-        delay: 1,
-        duration: 2,
+        duration: 1,
         ease: "easeInOut",
     }
     const squareVariant = {
