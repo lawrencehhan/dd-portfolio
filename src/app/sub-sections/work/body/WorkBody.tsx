@@ -45,7 +45,12 @@ export default function WorkBody(props:WorkBody) {
             staggerChildren: 0.2,
           },
         },
-        hide: { opacity: 0 }
+        hide: { 
+            opacity: 0,
+            transition: {
+                staggerDirection: -1,
+            }
+        }
     }
 
     return (
