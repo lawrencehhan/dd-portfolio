@@ -26,7 +26,6 @@
 .intro-container .intro-col-blurb .textbox .btn-portfolio {
   height: 40px;
   width: 161px;
-  padding: 15px;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -38,6 +37,22 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+.intro-container .intro-col-blurb .textbox .btn-portfolio .btn-portfolio-link {
+  background-color: #2B3A55;
+  color: #F2E5E5;
+  font-family: var(--font-montserrat);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-container {

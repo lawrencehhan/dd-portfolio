@@ -1,5 +1,7 @@
+'use client'
+import { useEffect } from 'react';
 import Square from '../../../components/Square';
-import { motion } from 'framer-motion';
+import { motion, usePresence } from 'framer-motion';
 interface ProjectCard {
     id: number;
     featured: boolean;
@@ -11,8 +13,13 @@ interface ProjectCard {
 
 export default function ProjectCard(props:ProjectCard) {
     const {id, title, featured, text} = props;
+    // const [isPresent, safeToRemove] = usePresence()
+    // useEffect(() => {
+    //     !isPresent && setTimeout(safeToRemove, 3000)
+    // }, [isPresent])
+
     const cardVariants = {
-        hidden: { x: -10, y: 0, opacity: 0 },
+        hidden: { x: -10, y: -10, opacity: 0 },
         visible: {
           x: 0,
           y: 0,
@@ -29,7 +36,8 @@ export default function ProjectCard(props:ProjectCard) {
             key={id}
             exit={{
                 opacity: 0,
-                y: -20,
+                y: 20,
+                x: 20,
                 transition: {
                   ease: "easeIn",
                   duration: .5,
