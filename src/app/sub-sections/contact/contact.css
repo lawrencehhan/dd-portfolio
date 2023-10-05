@@ -1,6 +1,88 @@
 .page-contact {
   margin-top: 112px;
   border: solid 1.2px black;
+  display: flex;
+}
+.page-contact .contact-form {
+  width: 50%;
+  min-height: 929px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: right;
+}
+.page-contact .contact-form .contact-form-card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 520px;
+  height: 696px;
+  border: 1px solid green;
+  margin-right: 58px;
+  margin-top: 94px;
+}
+.page-contact .contact-form .contact-form-card .form-col {
+  width: 100%;
+  border: 1px solid red;
+}
+.page-contact .contact-actions {
+  width: 50%;
+  min-height: 82vh;
+  border: 1px solid red;
+}
+.page-contact .contact-actions .contact-actions-card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 57px;
+  background-color: #F2E5E5;
+  border-radius: 47px;
+  width: 469px;
+  height: 634px;
+  margin-left: 110px;
+  margin-top: 185px;
+}
+.page-contact .contact-actions .contact-actions-card .actions-col-icons {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 44px;
+  border: solid 1.2px blue;
+}
+.page-contact .contact-actions .contact-actions-card .actions-col-icons .contact-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+}
+.page-contact .contact-actions .contact-actions-card .actions-col-icons .contact-button .contact-icon-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.page-contact .contact-actions .contact-actions-card .actions-col-icons .contact-button-mail {
+  background-color: #E8C4C4;
+}
+.page-contact .contact-actions .contact-actions-card .actions-col-icons .contact-button-linkedin {
+  background-color: #2B3A55;
+}
+.page-contact .contact-actions .contact-actions-card .actions-col-icons .contact-button-github {
+  background-color: #CE7777;
+}
+.page-contact .contact-actions .contact-actions-card .actions-col-graphic {
+  display: flex;
+  justify-content: center;
+  border: 1.2px solid green;
 }
 
 /*# sourceMappingURL=contact.css.map */
