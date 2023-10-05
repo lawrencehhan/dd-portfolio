@@ -6,7 +6,8 @@ export default function Contact() {
 
   return (
     <main className="main page-contact">
-        <div>contact page</div>
+        <Form />
+        <QuickActions />
     </main>
   )
 }
