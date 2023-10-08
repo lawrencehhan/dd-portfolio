@@ -1,3 +1,4 @@
+'use client'
 import { motion, AnimatePresence } from 'framer-motion';
 interface NavbarBurger {
     darkMode: boolean;
@@ -6,9 +7,11 @@ interface NavbarBurger {
 }
 
 export default function Burger(props:NavbarBurger) {
-    const {darkMode, isOpen, handleOpen} = props;
+    const {isOpen, handleOpen} = props;
     const svgVariants = {
-        hidden: { opacity: 0, },
+        hidden: { 
+            opacity: 0, 
+        },
         visible: {
             opacity: 1,
             transition: {
@@ -17,6 +20,9 @@ export default function Burger(props:NavbarBurger) {
                 ease: "easeInOut"
             }
         },
+        hide: {
+            opacity: 0,
+        }
     }
 
     // Motion Components
@@ -64,7 +70,7 @@ export default function Burger(props:NavbarBurger) {
         transition,
     }
     const width = 24
-    const height = 64
+    const height = 44
     const unitHeight = 6
     const unitWidth = (unitHeight * (width as number)) / (height as number);
 
@@ -80,6 +86,7 @@ export default function Burger(props:NavbarBurger) {
             className="burger-svg"
             initial="hidden"
             animate="visible"
+            exit="hide"
             // exit="hide"
             key="li-svg">
                 <motion.line

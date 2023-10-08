@@ -1,12 +1,17 @@
 import React from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 interface NavbarMobile {
+    navLinks: {
+        name: string;
+        href:string
+    }[];
     darkMode: boolean;
     handleOpen: ()=>void;
 }
 
 export default function Navbar(props:NavbarMobile) {
-    const {darkMode, handleOpen} = props;
+    const {navLinks, darkMode, handleOpen} = props;
     const navbarVariants = {
         hidden: {opacity: 0, y: -20, },
         visible: {
@@ -39,26 +44,34 @@ export default function Navbar(props:NavbarMobile) {
                 <motion.li onClick={() => {
                     handleOpen()
                     }} key="nav-home">
-                    <motion.a className="nav-item-mobile">home</motion.a>
+                    <Link
+                        className="nav-item-mobile"
+                        href={'/'}
+                    >
+                        Home
+                    </Link>
                 </motion.li>
                 <motion.li onClick={() => {
                     handleOpen()
-                    }} key="nav-about">
-                    <motion.a className="nav-item-mobile">about</motion.a>
-                </motion.li>
-                <motion.li onClick={() => {
-
-                    handleOpen()
-                    }} key="nav-projects">
-                    <motion.a className="nav-item-mobile">experience / projects</motion.a>
+                    }} key="nav-work">
+                    <Link
+                        className="nav-item-mobile"
+                        href={'/work'}
+                    >
+                        Work
+                    </Link>
                 </motion.li>
                 <motion.li onClick={() => {
                     handleOpen()
                     }} key="nav-contact">
-                    <motion.a className="nav-item-mobile">contact</motion.a>
+                    <Link
+                        className="nav-item-mobile"
+                        href={'/contact'}
+                    >
+                        Contact
+                    </Link>
                 </motion.li>
                 
-
             </motion.ul>
     )
 }

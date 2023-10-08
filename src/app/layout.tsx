@@ -1,4 +1,5 @@
 'use client'
+import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import './globals.css'
 import type { Metadata } from 'next'
@@ -57,7 +58,7 @@ export default function RootLayout({
       })
       console.log(NavLinks[0])
   }, [])
-
+  console.log(isMobile)
   // Check to see if navbar Burger is open
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const handleOpen = () => {
@@ -67,6 +68,9 @@ export default function RootLayout({
   
   return (
     <html lang="en">
+      <Head>
+        <meta name="viewport" content="viewport-fit=cover" />
+      </Head>
       <body className={`${montserrat.variable} ${ovo.variable}`}>
         <Navbar 
           navLinks={NavLinks}

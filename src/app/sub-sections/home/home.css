@@ -1,6 +1,6 @@
 .intro-container {
   position: relative;
-  height: 507px;
+  height: 100%;
   width: 100%;
   margin-top: 112px;
   display: flex;
@@ -8,6 +8,8 @@
 }
 .intro-container .intro-col {
   width: 50%;
+  padding-top: 71px;
+  padding-bottom: 81px;
   border: solid 1.2px blue;
   display: flex;
   align-items: center;
@@ -191,6 +193,155 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+  }
+}
+@media (min-width: 0px) and (max-width: 701px) {
+  .intro-container {
+    margin-top: 86px;
+  }
+  .intro-container .intro-col {
+    width: 50%;
+    padding-top: 71px;
+    padding-bottom: 81px;
+    border: solid 1.2px blue;
+    display: flex;
+    align-items: center;
+  }
+  .intro-container .intro-col-media {
+    justify-content: center;
+  }
+  .intro-container .intro-col-blurb .textbox {
+    height: 234px;
+    width: 549px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    border: solid 1px green;
+  }
+  .intro-container .intro-col-blurb .textbox .btn-portfolio {
+    height: 40px;
+    width: 161px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2B3A55;
+    color: #F2E5E5;
+    font-family: var(--font-montserrat);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .intro-container .intro-col-blurb .textbox .btn-portfolio .btn-portfolio-link {
+    background-color: #2B3A55;
+    color: #F2E5E5;
+    font-family: var(--font-montserrat);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-container {
+    position: relative;
+    height: 845px;
+    width: 100%;
+    display: flex;
+    background-color: #F2E5E5;
+    border: solid 1.2px red;
+  }
+  .about-container .about-col {
+    width: 50%;
+    height: 100%;
+    border: solid 1.2px blue;
+    display: flex;
+    align-items: center;
+  }
+  .about-container .about-col-media {
+    justify-content: center;
+  }
+  .about-container .about-col-media .svg-rect-container {
+    position: absolute;
+  }
+  .about-container .about-col-media .square-01 {
+    top: 100px;
+  }
+  .about-container .about-col-media .square-02 {
+    top: 351px;
+    transform: translateX(120px);
+  }
+  .about-container .about-col-media .square-03 {
+    top: 400px;
+    transform: translateX(-224px);
+  }
+  .about-container .about-col-blurb {
+    justify-content: center;
+  }
+  .about-container .about-col-blurb .textbox {
+    height: 100%;
+    width: 457px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    border: solid 1px green;
+  }
+  .about-container .about-col-blurb .textbox .about-text {
+    margin-top: 27px;
+  }
+
+  .projects-container {
+    position: relative;
+    height: 730px;
+    width: 100%;
+    display: flex-wrap;
+    border: solid 1.2px black;
+    align-items: center;
+  }
+  .projects-container .projects-col-blurb {
+    width: 100%;
+    margin-top: 83px;
+    margin-left: 122px;
+  }
+  .projects-container .projects-col-media {
+    margin-top: 56px;
+    display: flex;
+    justify-content: center;
+    gap: 81px;
+  }
+  .projects-container .projects-col-media .project-card {
+    width: 345px;
+    height: 451px;
+    background-color: #E8C4C4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    border: solid 1px blue;
+  }
+  .projects-container .projects-col-media .project-card .card-image-container {
+    width: 281px;
+    height: 274px;
+    border: 2px solid var(--primary-100, #F2E5E5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .projects-container .projects-col-media .project-card .card-title {
+    color: #1B2536;
+    margin-top: 17px;
+  }
+  .projects-container .projects-col-media .project-card .card-text {
+    text-align: center;
+    width: 281px;
+    margin-top: 12px;
   }
 }
 

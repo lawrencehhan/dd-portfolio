@@ -106,10 +106,12 @@ export default function Navbar(props:Navbar) {
         })
 
     return (
+        <AnimatePresence>
             <motion.ul className={`navbar ${darkMode && "dark"}`}
                 initial="hidden"
                 animate="visible"
                 exit="hide"
+                key='navBar'
                 variants={navbarVariants}
             >
                 <AnimatePresence>
@@ -126,14 +128,14 @@ export default function Navbar(props:Navbar) {
                                 <Image 
                                     src={Logo}
                                     alt="Logo"
-                                    width={145}
-                                    height={111}
+                                    width={!isMobile ? 145 : 115}
+                                    height={!isMobile ? 111 : 86}
                                     className="home-logo"
                                 />
                             </Link>
                     </motion.li>     
                     {/* Standard Navbar LIs */}
-                    {!isMobile && links}
+                    {/* {!isMobile && !isFirstBoot && links} */}
                     {/* Burger SVG for Mobile */}
                     {isMobile &&           
                         <Burger 
@@ -150,5 +152,6 @@ export default function Navbar(props:Navbar) {
                     }
                 </AnimatePresence>  
             </motion.ul>
+        </AnimatePresence>
     )
 }
