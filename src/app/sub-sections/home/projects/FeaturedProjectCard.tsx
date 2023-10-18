@@ -14,7 +14,7 @@ export default function FeaturedProjectCard(props:FeaturedProjectCard) {
             <div className="card-image-container">
                 <Square extraClass='card-image' color='#C4CEDF' width={266} height={258} animated={false} />
             </div>
-            <div className='card-title text-heading-m'>{title}</div>
+            <div className='card-title'>{title}</div>
             <div className='card-text text-body-m'>{text}</div>
             <div></div>
         </div>

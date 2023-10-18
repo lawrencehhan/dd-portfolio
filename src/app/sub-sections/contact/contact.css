@@ -85,4 +85,60 @@
   border: 1.2px solid green;
 }
 
+/* Tablet and Smaller Desktop */
+@media screen and (max-width: 701px) {
+  .page-contact {
+    margin-top: 86px;
+    flex-wrap: wrap;
+  }
+  .page-contact .contact-form {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .page-contact .contact-form .contact-form-card {
+    width: 267px;
+    margin: 0;
+    margin-top: 61px;
+  }
+  .page-contact .contact-actions {
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page-contact .contact-actions .contact-actions-card {
+    gap: 27px;
+    border-radius: 35px;
+    width: 267px;
+    height: 116px;
+    margin: 0;
+  }
+  .page-contact .contact-actions .contact-actions-card .actions-col-icons {
+    height: 55px;
+    gap: 27px;
+  }
+  .page-contact .contact-actions .contact-actions-card .actions-col-icons .contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+  }
+  .page-contact .contact-actions .contact-actions-card .actions-col-icons .contact-button .contact-icon-wrapper {
+    border-radius: 15px;
+  }
+  .page-contact .contact-actions .contact-actions-card .actions-col-icons .contact-button .contact-icon-wrapper .button-icon {
+    height: 33px;
+    width: 33px;
+  }
+  .page-contact .contact-actions .contact-actions-card .actions-col-graphic {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=contact.css.map */
