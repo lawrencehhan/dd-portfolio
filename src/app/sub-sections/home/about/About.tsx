@@ -1,15 +1,31 @@
 "use client"
-import {motion} from 'framer-motion';
+import { useState, useEffect } from 'react';
 import Square from '../../../components/Square';
 import '../home.css';
 
 
 export default function About() {
+    // Check for device width
+    const [isMobile, setMobile] = useState<boolean>(false)
+    useEffect(() => {
+        // Listening for window resizing
+        if (window.innerWidth <= 1120) {
+        setMobile(true)
+        }
+        window.addEventListener("resize", function() {
+        if (window.innerWidth <= 1120) {
+            setMobile(true)
+        } else {
+            setMobile(false)
+        }
+        })
+    }, [])
+
     return (
         <div className='about-container'>
             <div className='about-col about-col-blurb'>
                 <div className='textbox'>
-                    <div className='text-heading-l about-title'>about me</div>
+                    <div className= {`${isMobile ? 'text-heading-s' : 'text-heading-l'} about-title`}>about me</div>
                     <div className='text-body-m about-text'>
                         Lorem ipsum dolor sit amet consectetur. Enim magna lacus euismod id cras. Porttitor sed at turpis eu faucibus blandit erat. Enim sit sed erat elit nam sem amet. Accumsan donec eget placerat ut quis suscipit neque in aliquet. Porta pharetra odio elit et dolor eu. Convallis ligula commodo amet elit amet lobortis aliquet arcu. Ac a vulputate lectus consequat faucibus nulla vitae vitae. Maecenas vitae vel maecenas suscipit faucibus. Tristique nunc interdum at mollis gravida.
                         <br></br>
@@ -22,7 +38,7 @@ export default function About() {
                 </div>
             </div>
             <div className='about-col about-col-media'>
-                <Square extraClass="square-01" color="#515B6C" width={490} height={386} animated={true}></Square>
+                <Square extraClass="square-01" color="#515B6C" width={isMobile ? 295 : 490} height={isMobile ? 239 : 386} animated={true}></Square>
                 <Square extraClass="square-02" color="#8D97A8" width={329} height={329} animated={true}></Square>
                 <Square extraClass="square-03" color="#C4CEDF" width={184} height={361} animated={true}></Square>
             </div>

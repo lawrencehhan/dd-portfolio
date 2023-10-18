@@ -146,6 +146,7 @@ export default function Navbar(props:Navbar) {
                     }
                     {isMobile && isOpen &&
                         <NavbarMobile 
+                            navLinks={navLinks}
                             darkMode={darkMode}
                             handleOpen={handleOpen}
                         />
