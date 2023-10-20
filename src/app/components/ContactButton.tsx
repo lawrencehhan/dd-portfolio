@@ -28,31 +28,8 @@ export default function ContactButton(props:ContactButton) {
 
     
     return (
-        // <motion.svg className={`contact-button ${extraClass ? extraClass : ''}`} height={height} width={width}
-        //     viewBox={`0 0 ${width} ${height}`}
-        //     initial="hidden"
-        //     animate="visible"
-        //     variants={!animated ? undefined : buttonVariant}
-        // >
-        //     <motion.rect
-        //         width={width}
-        //         height={height}
-        //         fill={color}
-        //     >
-        //         <a href={link} className="contact-icon-wrapper" target="_blank">
-        //             <Image 
-        //                 // src={require(`../../assets/footer/${darkMode ? "githubDM.png" : "github.png"}`)} 
-        //                 src={image}
-        //                 alt="ContactButton"
-        //                 width={imageSize}
-        //                 height={imageSize}
-        //                 className='button-icon' 
-        //             />
-        //         </a>
-        //     </motion.rect>
-
-        // </motion.svg>
         <motion.button className={`contact-button ${extraClass ? extraClass : ''}`}
+            id={link}
             whileHover={{ 
                 scale: 1.04, 
                 transition: {

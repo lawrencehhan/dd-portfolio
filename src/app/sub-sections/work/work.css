@@ -73,6 +73,7 @@
   border: solid 1.2px black;
   background-color: blueviolet;
   row-gap: 138px;
+  column-gap: 79px;
 }
 .work-body .project-card {
   width: 400px;
@@ -81,5 +82,76 @@
 }
 
 /* Tablet and Smaller Desktop */
+@media screen and (max-width: 701px) {
+  .work-header {
+    margin-top: 86px;
+  }
+  .work-header .title {
+    margin-top: 61px;
+    margin-left: 49px;
+  }
+  .work-header .work-filters {
+    margin-top: 12px;
+    margin-left: 49px;
+    width: 517px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 92px;
+    border: solid 1px black;
+  }
+  .work-header .work-filters li {
+    display: inline-block;
+    position: relative;
+    color: #1B2536;
+    cursor: pointer;
+  }
+  .work-header .work-filters li .all-underline {
+    position: absolute;
+    border-radius: 5px;
+    bottom: -6px;
+    right: 0;
+    height: 5px;
+    width: 122px;
+    background: #CE7777;
+    left: -40px;
+  }
+  .work-header .work-filters li .design-underline {
+    position: absolute;
+    border-radius: 5px;
+    bottom: -6px;
+    right: 0;
+    height: 5px;
+    width: 122px;
+    background: #CE7777;
+    left: -16px;
+  }
+  .work-header .work-filters li .development-underline {
+    position: absolute;
+    border-radius: 5px;
+    bottom: -6px;
+    right: 0;
+    height: 5px;
+    width: 122px;
+    background: #CE7777;
+    left: 25px;
+  }
+  .work-header .work-filters .selected {
+    color: #CE7777;
+  }
+
+  .work-body {
+    position: relative;
+    margin-top: 77.05px;
+    margin-bottom: 60.85px;
+    row-gap: 64.24px;
+  }
+  .work-body .project-card {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+  }
+}
 
 /*# sourceMappingURL=work.css.map */
