@@ -65,7 +65,8 @@ $accent-500: #2B3A55;
     justify-content: center;
     border: solid 1.2px black;
     background-color: blueviolet;
-    row-gap: 138px;
+    row-gap: 138px; // vertical
+    column-gap: 79px; // horizontal
     .project-card {
         width: 400px; // ?????
         display: flex;
@@ -76,6 +77,60 @@ $accent-500: #2B3A55;
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
-   
+
+}
+@media screen and (max-width: 701px) {
+    .work-header {
+        margin-top: 86px;
+        .title {
+            margin-top: 61px;
+            margin-left: 49px;
+        }
+        .work-filters {
+            margin-top: 12px;
+            margin-left: 49px;
+            // start here
+            width: 517px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 92px;
+            border: solid 1px black;
+            li {
+                display: inline-block;
+                position: relative;
+                color: #1B2536;
+                cursor: pointer;
+                .all-underline {
+                    @include underline;
+                    left: -40px;
+                }
+                .design-underline {
+                    @include underline;
+                    left: -16px;
+                }
+                .development-underline {
+                    @include underline;
+                    left: 25px;
+                }
+            }
+            .selected {
+                color: #CE7777;
+            }
+        }
+    }
+    .work-body {
+        position: relative;
+        margin-top: 77.05px;
+        margin-bottom: 60.85px;
+        row-gap: 64.24px;
+        .project-card {
+            width: 400px; // ?????
+            display: flex;
+            justify-content: center;
+        }
+    }
+
 }
     

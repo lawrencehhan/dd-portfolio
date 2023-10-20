@@ -1,5 +1,5 @@
 'use client'
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Square from '../../../components/Square';
 import { motion, usePresence } from 'framer-motion';
 interface ProjectCard {
@@ -17,6 +17,20 @@ export default function ProjectCard(props:ProjectCard) {
     // useEffect(() => {
     //     !isPresent && setTimeout(safeToRemove, 3000)
     // }, [isPresent])
+    const [isMobile, setMobile] = useState<boolean>(false)
+    useEffect(() => {
+        // Listening for window resizing
+        if (window.innerWidth <= 1120) {
+        setMobile(true)
+        }
+        window.addEventListener("resize", function() {
+        if (window.innerWidth <= 1120) {
+            setMobile(true)
+        } else {
+            setMobile(false)
+        }
+        })
+    }, [])
 
     const cardVariants = {
         hidden: { x: -10, y: -10, opacity: 0 },
@@ -54,7 +68,7 @@ export default function ProjectCard(props:ProjectCard) {
             variants={cardVariants}
         >
             <div className="card-image-container">
-                <Square extraClass='card-image' color='#C4CEDF' width={332} height={306} animated={false} />
+                <Square extraClass='card-image' color='#C4CEDF' width={isMobile?266.5:332} height={isMobile?245.6:306} animated={false} />
                 <div>{title}</div>
             </div>
             {/* <div className='card-title text-heading-m'>{title}</div>

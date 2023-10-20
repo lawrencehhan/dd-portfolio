@@ -9,6 +9,22 @@ interface WorkHeader {
 
 export default function WorkHeader(props:WorkHeader) {
     const {selectedFilter, handleFilterChange} = props;
+
+    const [isMobile, setMobile] = useState<boolean>(false)
+    useEffect(() => {
+        // Listening for window resizing
+        if (window.innerWidth <= 1120) {
+        setMobile(true)
+        }
+        window.addEventListener("resize", function() {
+        if (window.innerWidth <= 1120) {
+            setMobile(true)
+        } else {
+            setMobile(false)
+        }
+        })
+    }, [])
+
     const variants = {
         hover: { 
             scale: 1.05,
@@ -27,7 +43,7 @@ export default function WorkHeader(props:WorkHeader) {
 
     return (
         <div className='work-header'>
-            <div className='text-heading-l title'>Portfolio</div>
+            <div className={`${isMobile?'text-heading-s':'text-heading-l'} title`}>Portfolio</div>
             <ul className='work-filters'>
                 {filterOptions.map((filter) => (
                     <motion.li 
