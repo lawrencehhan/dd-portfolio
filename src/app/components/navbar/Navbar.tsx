@@ -116,11 +116,8 @@ export default function Navbar(props:Navbar) {
             >
                 <AnimatePresence>
                     {/* Home Button / Logo */}
-                    <motion.li className="li-home" 
-                        key="nav-home"
-                        initial="hidden"
-                        animate="visible"
-                        variants={logoRefVariant}>
+                    <li className="li-home" 
+                        key="nav-home">
                             <Link 
                                 className="nav-logo"
                                 href={'/'}
@@ -133,7 +130,7 @@ export default function Navbar(props:Navbar) {
                                     className="home-logo"
                                 />
                             </Link>
-                    </motion.li>     
+                    </li>     
                     {/* Standard Navbar LIs */}
                     {/* {!isMobile && !isFirstBoot && links} */}
                     {/* Burger SVG for Mobile */}
