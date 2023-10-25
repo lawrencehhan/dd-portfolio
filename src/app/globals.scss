@@ -184,27 +184,20 @@ body {
   
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
-    .burger-svg {
-        border: 2px solid #CE7777;
-        border-radius: 6px;
-        padding-left: 8.8px;
-        padding-right: 8.8px;
-        position: absolute;
-        margin-right: 27px;
-        z-index: 100;
-    }
     html,
     body {
         .navbar {
             height: 86px;
             padding-right: 27px;
+            display: flex;
+            justify-content: center;
             .burger-svg {
                 border: 2px solid #CE7777;
                 border-radius: 6px;
                 padding-left: 8.8px;
                 padding-right: 8.8px;
                 position: absolute;
-                margin-right: 27px;
+                margin-right: (22+27)px;
                 z-index: 100;
             }
             li {
@@ -250,7 +243,7 @@ body {
             .li-home {
             left: 10%;
             }
-            .navbar-mobile {
+            .navbar-mobile-dropdown {
                 list-style-type: none;
                 border-bottom: 1px solid black;
                 position: fixed;
@@ -296,13 +289,14 @@ body {
         .navbar {
             height: 86px;
             padding-right: 27px;
+            justify-content: center;
             .burger-svg {
                 border: 2px solid #CE7777;
                 border-radius: 6px;
                 padding-left: 8.8px;
                 padding-right: 8.8px;
                 position: absolute;
-                margin-right: 27px;
+                right: (22px+27px);
                 z-index: 100;
             }
             li {
@@ -344,20 +338,27 @@ body {
                     transition: 0.4s ease-in-out;
                     }
                 }
+                .nav-item-mobile {
+                    @include text-heading;
+                    color: $neutrals-700;
+                    font-size: 20px;
+                }
             }
             .li-home {
             left: 10%;
             }
-            .navbar-mobile {
+            .navbar-mobile-dropdown {
                 list-style-type: none;
-                border-bottom: 1px solid black;
                 position: fixed;
                 position: -webkit-fixed;
-                height: 24vh;
+                top: 92px;
+                height: 180px;
+                width: 84vw;
+                background: #FFF;
+                border: solid 1px #1B2536;
+                border-radius: 5px;
+                z-index: 100;
                 margin: 0;
-                top: 0;
-                padding-top: 86px;
-                width: 100vw;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;

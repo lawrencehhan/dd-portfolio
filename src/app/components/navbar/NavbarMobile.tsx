@@ -18,27 +18,30 @@ export default function Navbar(props:NavbarMobile) {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.5,
-                ease: "easeInOut"
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
             }
         },
         hide: {
             opacity: 0,
             y: -200,
             transition: {
-                duration: 1,
-                ease: "easeInOut"
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
             }
         }
     }
 
     return (
-            <motion.ul className={`navbar-mobile ${darkMode && "dark"}`}
-            initial="hidden"
-            animate="visible"
-            exit="hide"
-            variants={navbarVariants}
-            key="something"
+            <motion.ul 
+                className={`navbar-mobile-dropdown ${darkMode && "dark"}`}
+                initial="hidden"
+                animate="visible"
+                exit="hide"
+                variants={navbarVariants}
+                key="something"
             >  
                 {/* Navbar Items */}
                 <motion.li onClick={() => {
