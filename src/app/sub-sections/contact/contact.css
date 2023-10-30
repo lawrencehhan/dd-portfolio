@@ -1,12 +1,10 @@
 .page-contact {
   margin-top: 112px;
-  border: solid 1.2px black;
   display: flex;
 }
 .page-contact .contact-form {
   width: 50%;
   min-height: 929px;
-  border: 1px solid black;
   display: flex;
   justify-content: right;
 }
@@ -16,18 +14,69 @@
   flex-wrap: wrap;
   width: 520px;
   height: 696px;
-  border: 1px solid green;
   margin-right: 58px;
   margin-top: 94px;
 }
 .page-contact .contact-form .contact-form-card .form-col {
   width: 100%;
-  border: 1px solid red;
+}
+.page-contact .contact-form .contact-form-card .formfield-wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.page-contact .contact-form .contact-form-card .formfield-wrap .formfield {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-family: var(--font-montserrat);
+  color: #1B2536;
+  font-size: 16px;
+  font-weight: 600;
+  gap: 7px;
+}
+.page-contact .contact-form .contact-form-card .formfield-wrap .formfield-label {
+  width: 100%;
+}
+.page-contact .contact-form .contact-form-card .formfield-wrap .formfield-input {
+  border-radius: 5px;
+  border: 1px solid #1B2536;
+  background: #FFF;
+  width: 450px;
+  height: 44px;
+  text-indent: 10px;
+  font-size: 16px;
+  font-family: var(--font-montserrat);
+}
+.page-contact .contact-form .contact-form-card .formfield-wrap .formfield .label-email, .page-contact .contact-form .contact-form-card .formfield-wrap .formfield .label-message {
+  margin-top: 39px;
+}
+.page-contact .contact-form .contact-form-card .formfield-wrap .formfield .input-message {
+  text-indent: 0;
+  padding: 10px;
+  width: 520px;
+  height: 220px;
+  font-size: 14px;
+}
+.page-contact .contact-form .contact-form-card .btn-submit {
+  height: 40px;
+  width: 193px;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2B3A55;
+  color: #F2E5E5;
+  font-family: var(--font-montserrat);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 .page-contact .contact-actions {
   width: 50%;
   min-height: 82vh;
-  border: 1px solid red;
 }
 .page-contact .contact-actions .contact-actions-card {
   position: relative;
@@ -50,7 +99,6 @@
   justify-content: center;
   align-content: center;
   gap: 44px;
-  border: solid 1.2px blue;
 }
 .page-contact .contact-actions .contact-actions-card .actions-col-icons .contact-button {
   display: flex;
@@ -82,7 +130,6 @@
 .page-contact .contact-actions .contact-actions-card .actions-col-graphic {
   display: flex;
   justify-content: center;
-  border: 1.2px solid green;
 }
 
 /* Tablet and Smaller Desktop */
@@ -95,15 +142,36 @@
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+    min-height: 613px;
   }
   .page-contact .contact-form .contact-form-card {
     width: 267px;
     margin: 0;
     margin-top: 61px;
   }
+  .page-contact .contact-form .contact-form-card .formfield-wrap .formfield-label {
+    width: 100%;
+  }
+  .page-contact .contact-form .contact-form-card .formfield-wrap .formfield-input {
+    width: 100%;
+    text-indent: 10px;
+  }
+  .page-contact .contact-form .contact-form-card .formfield-wrap .formfield .label-name {
+    margin-top: 23px;
+  }
+  .page-contact .contact-form .contact-form-card .formfield-wrap .formfield .input-message {
+    padding: 10px;
+    width: 100%;
+    height: 320px;
+  }
+  .page-contact .contact-form .contact-form-card .btn-submit {
+    height: 43px;
+    width: 100%;
+    margin-top: 35px;
+  }
   .page-contact .contact-actions {
     width: 100%;
-    min-height: 20vh;
+    min-height: 116px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,6 +182,8 @@
     width: 267px;
     height: 116px;
     margin: 0;
+    margin-top: 100px;
+    margin-bottom: 39px;
   }
   .page-contact .contact-actions .contact-actions-card .actions-col-icons {
     height: 55px;

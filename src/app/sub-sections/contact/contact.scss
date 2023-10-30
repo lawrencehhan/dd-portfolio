@@ -20,12 +20,10 @@
 }
 .page-contact {
     margin-top: 112px;
-    border: solid 1.2px black;
     display: flex;
     .contact-form {
         width: 50%;
         min-height: 929px;
-        border: 1px solid black;
         display: flex;
         justify-content: right;
         .contact-form-card {
@@ -34,20 +32,72 @@
             flex-wrap: wrap;
             width: 520px;
             height: 696px;
-            border: 1px solid green;
             margin-right: 58px;
             margin-top: 94px;
             .form-col {
                 width: 100%;
-                border: 1px solid red;
+            }
+            .formfield-wrap {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                .formfield {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    font-family: var(--font-montserrat);
+                    color: #1B2536;
+                    font-size: 16px;
+                    font-weight: 600;
+                    gap: 7px;
+                    &-label {
+                        width: 100%;
+                    }
+                    &-input {
+                        border-radius: 5px;
+                        border: 1px solid #1B2536;
+                        background: #FFF;
+                        width: 450px;
+                        height: 44px;
+                        text-indent: 10px;
+                        font-size: 16px;
+                        font-family: var(--font-montserrat);
+                    }
+                    .label-email, .label-message {
+                        margin-top: 39px;
+                    }
+                    .input-message {
+                        text-indent: 0;
+                        padding: 10px;
+                        width: 520px;
+                        height: 220px;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .btn-submit {
+                // display: flex;
+                height: 40px;
+                width: 193px;
+                padding: 15px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #2B3A55;
+                color: #F2E5E5;
+                font-family: var(--font-montserrat);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
             }
         }
-
+        
     }
     .contact-actions {
         width: 50%;
         min-height: 82vh;
-        border: 1px solid red;
         .contact-actions-card {
             position: relative;
             display: flex;
@@ -68,7 +118,6 @@
                 justify-content: center;
                 align-content: center;
                 gap: 44px;
-                border: solid 1.2px blue;
                 .contact-button {
                     @include button-styling;
                     .contact-icon-wrapper {
@@ -96,7 +145,6 @@
             .actions-col-graphic {
                 display: flex;
                 justify-content: center;
-                border: 1.2px solid green;
             }
         }
     }
@@ -113,18 +161,42 @@
             width: 100%;
             flex-wrap: wrap;
             justify-content: center;
+            min-height: 613px;
             .contact-form-card {
                 width: 267px;
                 margin: 0;
                 margin-top: 61px;
-                .form-col {
+                .formfield-wrap {
+                    .formfield {
+                        &-label {
+                            width: 100%;
+                        }
+                        &-input {
+                            width: 100%;
+                            text-indent: 10px;
+                        }
+                        .label-name {
+                            margin-top: 23px;
+                        }
+                        .input-message {
+                            padding: 10px;
+                            width: 100%;
+                            height: 320px;
+                        }
+                    }
+                }
+                .btn-submit {
+                    // display: flex;
+                    height: 43px;
+                    width: 100%;
+                    margin-top: 35px;
                 }
             }
         }
         /// here and below
         .contact-actions {
             width: 100%;
-            min-height: 20vh;
+            min-height: 116px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -134,6 +206,8 @@
                 width: 267px;
                 height: 116px;
                 margin: 0;
+                margin-top: (57px+43px);
+                margin-bottom: 39px;
                 .actions-col-icons {
                     height: 55px;
                     gap: 27px;

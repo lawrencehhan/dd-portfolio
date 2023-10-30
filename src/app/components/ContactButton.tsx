@@ -6,30 +6,34 @@ interface ContactButton {
     link: string;
     image: StaticImport;
     imageSize: number;
-    animated?: boolean;
     extraClass?: string;
 }
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 export default function ContactButton(props:ContactButton) {
-    const {link, image, imageSize, animated, extraClass} = props;
+    const {link, image, imageSize, extraClass} = props;
     
-    const buttonTransition = {
-        duration: 1,
-        ease: "easeInOut",
-    }
-    const buttonVariant = {
-        hidden: { opacity: 0 },
+    const buttonVariants = {
+        hidden: {
+            opacity: 0,
+            y: -40,
+        },
         visible: {
             opacity: 1,
-            transition: buttonTransition,
-        }
+            y: 0,
+            transition: {
+                type: "spring",
+                stiffness: 240,
+                damping: 12,
+            }
+        },
     }
 
     
     return (
         <motion.button className={`contact-button ${extraClass ? extraClass : ''}`}
             id={link}
+            key={link}
             whileHover={{ 
                 scale: 1.04, 
                 transition: {
@@ -38,6 +42,7 @@ export default function ContactButton(props:ContactButton) {
                 } 
             }}
             whileTap={{ scale: 0.92, opacity: .3 }}
+            variants={buttonVariants}
         >
 
             <Link

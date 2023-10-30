@@ -40,7 +40,7 @@ export default function ProjectCard(props:ProjectCard) {
           opacity: 1,
           transition: {
             ease: "easeInOut",
-            duration: 1.2,
+            duration: .5,
           }
         },
     }
@@ -54,7 +54,7 @@ export default function ProjectCard(props:ProjectCard) {
                 x: 20,
                 transition: {
                   ease: "easeIn",
-                  duration: .5,
+                  duration: .4,
                   delay: (id * 0.1),
                 }
             }}
