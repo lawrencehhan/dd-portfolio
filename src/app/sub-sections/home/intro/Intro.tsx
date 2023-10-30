@@ -1,5 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import introGraphic from '@/app/assets/intro-graphic.png';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
 import Square from '../../../components/Square';
@@ -26,7 +28,12 @@ export default function Intro() {
     return (
         <div className='intro-container'>
             <div className='intro-col intro-col-media'>
-                <Square color="#B5C3DC" width={isMobile? 295 : 466} height={isMobile ? 239 : 355} animated={true}></Square>
+                <Image
+                    src={introGraphic}
+                    alt="IntroGraphic"
+                    width={isMobile? 239 : 358} 
+                    height={isMobile ? 239 : 358}
+                />
             </div>
             <div className='intro-col intro-col-blurb'>
                 <div className='textbox'>
