@@ -30,7 +30,7 @@ export default function WorkBody(props:WorkBody) {
         const timer = setTimeout(() => {
             console.log('This will run after 1.2 second!')
             endFilterChange()
-        }, 800);
+        }, 1400);
         return () => clearTimeout(timer);
         }, [selectedFilter]);
 
@@ -42,7 +42,7 @@ export default function WorkBody(props:WorkBody) {
           x: 0,
           y: 0,
           transition: {
-            staggerChildren: 0.2,
+            staggerChildren: .12,
           },
         },
         hide: { 

@@ -93,7 +93,13 @@ export default function Navbar(props:Navbar) {
             const isActive = pathname === link.href
 
             return (
-                <motion.li  initial="hidden" animate="visible" exit="hide" variants={liVariants} key="nav-home">
+                <motion.li  
+                    initial="hidden" 
+                    animate="visible" 
+                    exit="hide" 
+                    variants={liVariants} 
+                    key="nav-home"
+                >
                     <Link
                         className={isActive ? 'active-nav nav-item' : 'nav-item'}
                         href={link.href}
@@ -132,7 +138,7 @@ export default function Navbar(props:Navbar) {
                             </Link>
                     </li>     
                     {/* Standard Navbar LIs */}
-                    {/* {!isMobile && !isFirstBoot && links} */}
+                    {!isMobile && !isFirstBoot && links}
                     {/* Burger SVG for Mobile */}
                     {isMobile &&           
                         <Burger 

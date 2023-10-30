@@ -1,7 +1,7 @@
 .work-header {
   position: relative;
   width: 100%;
-  margin-top: 112px;
+  margin-top: 193px;
   display: flex-wrap;
   flex-wrap: wrap;
 }
@@ -75,6 +75,7 @@
   width: 400px;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .work-body .project-card .card-image-container {
   text-align: center;

@@ -13,7 +13,7 @@ $accent-500: #2B3A55;
 .work-header {
     position: relative;
     width: 100%; 
-    margin-top: 112px;
+    margin-top: 112px+81px;
     display: flex-wrap;
     flex-wrap: wrap;
     .title {
@@ -67,6 +67,8 @@ $accent-500: #2B3A55;
         width: 400px; // ?????
         display: flex;
         justify-content: center;
+        position: relative;
+        
         .card-image-container {
             text-align: center;
             font-family: var(--font-montserrat);
