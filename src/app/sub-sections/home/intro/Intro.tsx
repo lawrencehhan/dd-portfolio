@@ -38,7 +38,7 @@ export default function Intro() {
             <div className='intro-col intro-col-blurb'>
                 <div className='textbox'>
                     <div className={`${isMobile ? 'text-heading-s' : 'text-heading-l' } title`}>Hi, I'm Danielle!</div>
-                    <div className={`${isMobile ? 'text-body-m' : 'text-body-s'} body`}>
+                    <div className={`${isMobile ? 'text-body-s' : 'text-body-m'} body`}>
                         I am a Business Analyst with over three years of experience on an 
                         Agile government project. I am skilled in creating innovative solutions 
                         and leading a development team to ensure delivery of satisfactory products. 

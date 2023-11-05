@@ -8,15 +8,10 @@ $accent-500: #2B3A55;
         width: 100%; 
         margin-top: 112px;
         display: flex;
-        // flex-wrap: wrap;
-        // align-items: center;
-        // justify-content: center;
-        border: solid 1.2px black;
         .intro-col {
             width: 50%;
             padding-top: 71px;
             padding-bottom: 81px;
-            border: solid 1.2px blue;
             display: flex;
             align-items: center;
             &-media {
@@ -24,12 +19,12 @@ $accent-500: #2B3A55;
             }
             &-blurb {
                 .textbox {
-                    height: 234px;
+                    // height: 234px;
                     width: 549px;
+                    gap: 25px;
                     display: flex;
                     flex-wrap: wrap;
                     align-content:space-between;
-                    border: solid 1px green;
                     .btn-portfolio {
                         height: 40px;
                         width: 161px;
@@ -72,11 +67,8 @@ $accent-500: #2B3A55;
         width: 100%; 
         display: flex;
         background-color: $primary-100;
-        border: solid 1.2px red;
         .about-col {
             width: 50%;
-            height: 100%;
-            border: solid 1.2px blue;
             display: flex;
             align-items: center;
             &-media {
@@ -97,16 +89,37 @@ $accent-500: #2B3A55;
                 }
             }
             &-blurb {
+                display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
+                // align-items: center;
+                align-content: center;
+                gap: 88px;
                 .textbox {
-                    height: 100%;
                     width: 457px;
                     display: flex;
                     flex-wrap: wrap;
                     align-content:center;
-                    border: solid 1px green;
                     .about-text {
                         margin-top: 27px;
+                    }
+                }
+                .textbox-about{
+                    // width: 457px;
+                }
+                .textbox-accolades{
+                    .about-text {
+                        display: flex;
+                        .listing-wrap-dates {
+                            
+                        }
+                        .listing-wrap-titles {
+                            
+                            margin-left: 27px;
+                        }
+                        .listing {
+
+                        }
                     }
                 }
             }

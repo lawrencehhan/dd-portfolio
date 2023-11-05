@@ -2,7 +2,7 @@
 import {useState} from 'react';
 import { filterOptions } from '@/app/assets/projectData';
 import {AnimatePresence, motion} from 'framer-motion';
-import ProjectCard from './ProjectCard';
+import ProjectCard from '../../../components/ProjectCard';
 import ProjectData from '../../../assets/projectData';
 import { useEffect } from 'react';
 interface WorkBody {
@@ -22,13 +22,13 @@ export default function WorkBody(props:WorkBody) {
                                     title={proj.title}
                                     text={proj.desc}
                                     link={proj.link}
+                                    thumbnail={proj.thumbnail}
                                 /> : null;
             return (
                 card
     )})
     useEffect(() => {
         const timer = setTimeout(() => {
-            console.log('This will run after 1.2 second!')
             endFilterChange()
         }, 1400);
         return () => clearTimeout(timer);

@@ -1,18 +1,20 @@
 'use client'
 import { useState, useEffect } from 'react';
-import Square from '../../../components/Square';
+import Image from 'next/image';
+import Square from './Square';
 import { motion, usePresence } from 'framer-motion';
+
 interface ProjectCard {
     id: number;
     featured: boolean;
     title: string;
     text: string;
-    image?: string;
+    thumbnail?: string;
     link?: string;
 }
 
 export default function ProjectCard(props:ProjectCard) {
-    const {id, title, featured, text} = props;
+    const {id, title, featured, text, thumbnail} = props;
     // const [isPresent, safeToRemove] = usePresence()
     // useEffect(() => {
     //     !isPresent && setTimeout(safeToRemove, 3000)
@@ -67,8 +69,15 @@ export default function ProjectCard(props:ProjectCard) {
             }}
             variants={cardVariants}
         >
-            <div className="card-image-container">
-                <Square extraClass='card-image' color='#C4CEDF' width={isMobile?266.5:332} height={isMobile?245.6:306} animated={false} />
+            <div className="card-thumbnail-container">
+                <Image 
+                    className='card-thumbnail'
+                    src={`/${thumbnail}`}
+                    alt={title}
+                    width={isMobile?266.5:332}
+                    height={isMobile?245.6:306}
+                />
+                {/* <Square extraClass='card-thumbnail' color='#C4CEDF' width={isMobile?266.5:332} height={isMobile?245.6:306} animated={false} /> */}
                 <div>{title}</div>
             </div>
             {/* <div className='card-title text-heading-m'>{title}</div>

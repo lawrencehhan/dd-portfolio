@@ -3,7 +3,7 @@ export interface ProjectData {
     featured: boolean;
     title: string;
     desc: string;
-    image?: string;
+    thumbnail?: string;
     tag: string[];
     link?: string;
 }[]
@@ -17,7 +17,7 @@ export default function ProjectData() {
                     featured: true,
                     title: "Book'd",
                     desc: "Making dining reservatios easier to track for restaurant employees",
-                    image: "synestify_example.png",
+                    thumbnail: "bookd_thumbnail.png",
                     tag: ['Design'],
                     link: "https://www.synestify.com/",
                 },
@@ -26,7 +26,7 @@ export default function ProjectData() {
                     featured: true,
                     title: "Money Sense",
                     desc: "Improving financial literacy from the convenience of your phone",
-                    image: "synestify_example.png",
+                    thumbnail: "moneySense_thumbnail.png",
                     tag: ['Design'],
                     link: "https://www.synestify.com/",
                 },
@@ -35,7 +35,7 @@ export default function ProjectData() {
                     featured: true,
                     title: "Tracehealth",
                     desc: "Streamlining EMRs to improve quality of patient care",
-                    image: "synestify_example.png",
+                    thumbnail: "synestify_example.png",
                     tag: ['Design'],
                     link: "https://www.synestify.com/",
                 },
@@ -44,7 +44,7 @@ export default function ProjectData() {
                     featured: false,
                     title: "Ube & Sugar Bakery",
                     desc: "Streamlining EMRs to improve quality of patient care",
-                    image: "synestify_example.png",
+                    thumbnail: "synestify_example.png",
                     tag: ['Development'],
                     link: "https://www.synestify.com/",
                 },
@@ -53,7 +53,7 @@ export default function ProjectData() {
                     featured: false,
                     title: "AAA",
                     desc: "Streamlining EMRs to improve quality of patient care",
-                    image: "synestify_example.png",
+                    thumbnail: "synestify_example.png",
                     tag: ['Development'],
                     link: "https://www.synestify.com/",
                 },
@@ -62,7 +62,7 @@ export default function ProjectData() {
                     featured: false,
                     title: "BBB",
                     desc: "Streamlining EMRs to improve quality of patient care",
-                    image: "synestify_example.png",
+                    thumbnail: "synestify_example.png",
                     tag: ['Design'],
                     link: "https://www.synestify.com/",
                 },
@@ -71,7 +71,7 @@ export default function ProjectData() {
                     featured: false,
                     title: "CCC",
                     desc: "Streamlining EMRs to improve quality of patient care",
-                    image: "synestify_example.png",
+                    thumbnail: "synestify_example.png",
                     tag: ['Design'],
                     link: "https://www.synestify.com/",
                 },
@@ -80,7 +80,7 @@ export default function ProjectData() {
                     featured: false,
                     title: "DDD",
                     desc: "Streamlining EMRs to improve quality of patient care",
-                    image: "synestify_example.png",
+                    thumbnail: "synestify_example.png",
                     tag: ['Design'],
                     link: "https://www.synestify.com/",
                 },

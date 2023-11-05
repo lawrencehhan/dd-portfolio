@@ -68,7 +68,7 @@ $accent-500: #2B3A55;
         display: flex;
         justify-content: center;
         position: relative;
-        
+        border: 1px solid black;
         .card-image-container {
             text-align: center;
             font-family: var(--font-montserrat);
