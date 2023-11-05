@@ -76,6 +76,7 @@
   display: flex;
   justify-content: center;
   position: relative;
+  border: 1px solid black;
 }
 .work-body .project-card .card-image-container {
   text-align: center;

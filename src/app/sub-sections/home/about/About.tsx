@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Square from '../../../components/Square';
 import '../home.css';
+import AchievementData from '../../../assets/achievementsData';
 
 
 export default function About() {
@@ -20,20 +21,56 @@ export default function About() {
         }
         })
     }, [])
-
+    const achievementsCount = AchievementData().length
+    const achievementsListingDates = AchievementData().map((achievement) => {
+        return (
+            <div className='listing-dates listing'>
+                <span>{achievement.date}</span>
+                {(achievement.id < achievementsCount) && 
+                    <>
+                        <br></br>
+                        <br></br>
+                    </>
+                }
+            </div>
+        )})
+    const achievementsListingTitles = AchievementData().map((achievement) => {
+        return (
+            <div className='listing-titles listing'>
+                <span>{achievement.title}</span>
+                {(achievement.id < achievementsCount) && 
+                    <>
+                        <br></br>
+                        <br></br>
+                    </>
+                }
+            </div>
+        )})
     return (
         <div className='about-container'>
             <div className='about-col about-col-blurb'>
-                <div className='textbox'>
-                    <div className= {`${isMobile ? 'text-heading-s' : 'text-heading-l'} about-title`}>about me</div>
+                <div className='textbox textbox-about'>
+                    <div className= {`${isMobile ? 'text-heading-s' : 'text-heading-l'} about-title`}>
+                        about me
+                    </div>
                     <div className='text-body-m about-text'>
-                        Lorem ipsum dolor sit amet consectetur. Enim magna lacus euismod id cras. Porttitor sed at turpis eu faucibus blandit erat. Enim sit sed erat elit nam sem amet. Accumsan donec eget placerat ut quis suscipit neque in aliquet. Porta pharetra odio elit et dolor eu. Convallis ligula commodo amet elit amet lobortis aliquet arcu. Ac a vulputate lectus consequat faucibus nulla vitae vitae. Maecenas vitae vel maecenas suscipit faucibus. Tristique nunc interdum at mollis gravida.
+                        I am a Business Analyst with over 5 years of experience on Agile government projects. I am also an aspiring UX Designer, working under the UX Design Lead and supporting design efforts each sprint.
                         <br></br>
                         <br></br>
-                        Sit eget auctor at viverra odio orci amet. Neque cursus id varius dignissim vitae elementum. Orci scelerisque ac risus sit tincidunt vel aliquam. Elementum blandit in natoque ac massa tempor. Orci mattis aliquam enim tincidunt leo. Vitae molestie gravida feugiat quis duis id netus amet diam. Adipiscing senectus ullamcorper in sit ridiculus lectus lectus sagittis hendrerit. Amet purus turpis senectus in cursus eros euismod luctus diam. Feugiat id consequat suspendisse ut hac eros est. Venenatis mauris vitae et augue non nisl.
-                        <br></br>
-                        <br></br>
-                        Nec et sit vitae cum. Et at elementum nibh laoreet dui diam. Erat sapien porttitor facilisi a condimentum scelerisque eget malesuada etiam. Cursus gravida ultrices suscipit sagittis iaculis eget et sed. Integer eros maecenas semper pretium lectus lectus pellentesque at.
+                        I am skilled in creating innovative solutions and leading a development team to ensure delivery of satisfactory products.
+                    </div>
+                </div>
+                <div className='textbox textbox-accolades'>
+                    <div className= {`${isMobile ? 'text-heading-s' : 'text-heading-m'} about-title`}>
+                        achievements
+                    </div>
+                    <div className='text-body-m about-text'>
+                        <div className='listing-wrap-dates'>
+                            {achievementsListingDates}
+                        </div>
+                        <div className='listing-wrap-titles'>
+                            {achievementsListingTitles}
+                        </div>
                     </div>
                 </div>
             </div>

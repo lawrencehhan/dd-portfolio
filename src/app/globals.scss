@@ -2,7 +2,7 @@ $primary-500: #CE7777;
 $primary-300: #E8C4C4;
 $primary-100: #F2E5E5;
 $accent-500: #2B3A55;
-$neutrals-900: #211212;
+$neutrals-900: #1B2536;
 $neutrals-700: #4E4646;
 $neutrals-500: #7A7171;
 $neutrals-300: #CAC4C4;
@@ -131,7 +131,7 @@ body {
 }
 .text-heading-m {
     @include text-heading;
-    color: $neutrals-500;
+    color: $neutrals-900;
     font-size: 32px;
     text-transform: uppercase;
     line-height: 130%;
@@ -165,7 +165,7 @@ body {
     @include text-body;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: -1%;
+    letter-spacing: -0.16px;
 }
 .text-body-s {
     @include text-body;

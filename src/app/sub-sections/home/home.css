@@ -4,13 +4,11 @@
   width: 100%;
   margin-top: 112px;
   display: flex;
-  border: solid 1.2px black;
 }
 .page-home .intro-container .intro-col {
   width: 50%;
   padding-top: 71px;
   padding-bottom: 81px;
-  border: solid 1.2px blue;
   display: flex;
   align-items: center;
 }
@@ -18,12 +16,11 @@
   justify-content: center;
 }
 .page-home .intro-container .intro-col-blurb .textbox {
-  height: 234px;
   width: 549px;
+  gap: 25px;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-  border: solid 1px green;
 }
 .page-home .intro-container .intro-col-blurb .textbox .btn-portfolio {
   height: 40px;
@@ -62,12 +59,9 @@
   width: 100%;
   display: flex;
   background-color: #F2E5E5;
-  border: solid 1.2px red;
 }
 .page-home .about-container .about-col {
   width: 50%;
-  height: 100%;
-  border: solid 1.2px blue;
   display: flex;
   align-items: center;
 }
@@ -89,18 +83,26 @@
   transform: translateX(-224px);
 }
 .page-home .about-container .about-col-blurb {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
+  gap: 88px;
 }
 .page-home .about-container .about-col-blurb .textbox {
-  height: 100%;
   width: 457px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  border: solid 1px green;
 }
 .page-home .about-container .about-col-blurb .textbox .about-text {
   margin-top: 27px;
+}
+.page-home .about-container .about-col-blurb .textbox-accolades .about-text {
+  display: flex;
+}
+.page-home .about-container .about-col-blurb .textbox-accolades .about-text .listing-wrap-titles {
+  margin-left: 27px;
 }
 .page-home .projects-container {
   position: relative;
