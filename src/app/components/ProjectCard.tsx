@@ -61,10 +61,17 @@ export default function ProjectCard(props:ProjectCard) {
                 }
             }}
             whileHover={{
+                // scale: 0.94,
                 scale: 1.01,
-                transition: { 
-                    duration: .4,
-                    ease: 'easeInOut',
+                border: '20px solid #e8c4c4',
+                // transition: { 
+                //     duration: .4,
+                //     ease: 'easeInOut',
+                // }
+                transition: {
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
                 }
             }}
             variants={cardVariants}
@@ -78,11 +85,7 @@ export default function ProjectCard(props:ProjectCard) {
                     height={isMobile?245.6:306}
                 />
                 {/* <Square extraClass='card-thumbnail' color='#C4CEDF' width={isMobile?266.5:332} height={isMobile?245.6:306} animated={false} /> */}
-                <div>{title}</div>
             </div>
-            {/* <div className='card-title text-heading-m'>{title}</div>
-            <div className='card-text text-body-m'>{text}</div>
-            <div></div> */}
         </motion.div>
     )
 }

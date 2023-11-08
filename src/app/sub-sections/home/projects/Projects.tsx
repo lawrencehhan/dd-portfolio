@@ -32,6 +32,8 @@ export default function Projects() {
                                     id={proj.id}
                                     title={proj.title}
                                     text={proj.desc}
+                                    isMobile={isMobile}
+                                    image={proj.thumbnail}
                                     link={proj.link}
                                 /> : null;
 

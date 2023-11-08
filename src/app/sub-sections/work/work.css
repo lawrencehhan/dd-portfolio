@@ -72,13 +72,10 @@
   column-gap: 79px;
 }
 .work-body .project-card {
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  border: 1px solid black;
+  height: 306px;
+  border: 20px solid #e8c4c400;
 }
-.work-body .project-card .card-image-container {
+.work-body .project-card .card-thumbnail-container {
   text-align: center;
   font-family: var(--font-montserrat);
 }
@@ -201,9 +198,7 @@
     row-gap: 64.24px;
   }
   .work-body .project-card {
-    width: 400px;
-    display: flex;
-    justify-content: center;
+    height: 245.6px;
   }
 }
 
