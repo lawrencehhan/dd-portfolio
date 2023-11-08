@@ -19,7 +19,7 @@ body .navbar {
   overflow: hidden;
   position: fixed;
   position: -webkit-fixed;
-  z-index: 100;
+  z-index: 104;
   display: inline-flex;
   align-items: center;
   justify-content: right;
