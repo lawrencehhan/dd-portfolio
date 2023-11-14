@@ -1,5 +1,5 @@
 'use client'
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
 import {motion} from 'framer-motion';
 import { filterOptions } from '../assets/projectData';
 import WorkHeader from '../sub-sections/work/header/WorkHeader';
@@ -19,14 +19,30 @@ export default function Work() {
   const endFilterChange = () => {
     setChangingFilter(false)
   }
+  const [isMobile, setMobile] = useState<boolean>(false)
+    useEffect(() => {
+        // Listening for window resizing
+        if (window.innerWidth <= 1120) {
+        setMobile(true)
+        }
+        window.addEventListener("resize", function() {
+        if (window.innerWidth <= 1120) {
+            setMobile(true)
+        } else {
+            setMobile(false)
+        }
+        })
+    }, [])
 
   return (
     <main className="main page-work">
       <WorkHeader 
         selectedFilter={selectedFilter} 
         handleFilterChange={handleFilterChange} 
+        isMobile={isMobile}
       />
       <WorkBody 
+        isMobile={isMobile}
         selectedFilter={selectedFilter}
         endFilterChange={endFilterChange}
         changingFilter={changingFilter}

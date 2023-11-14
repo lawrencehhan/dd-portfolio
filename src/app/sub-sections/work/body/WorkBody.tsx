@@ -6,13 +6,14 @@ import ProjectCard from '../../../components/ProjectCard';
 import ProjectData from '../../../assets/projectData';
 import { useEffect } from 'react';
 interface WorkBody {
+    isMobile: boolean;
     selectedFilter: string;
     changingFilter: boolean;
     endFilterChange: () => void;
 }
 
 export default function WorkBody(props:WorkBody) {
-    const { selectedFilter, changingFilter, endFilterChange } = props;
+    const { selectedFilter, changingFilter, endFilterChange, isMobile } = props;
     const filteredCards = ProjectData().map((proj) => {
         const selected = proj.tag.includes(selectedFilter) || (selectedFilter === 'All');
         const card = selected ? <ProjectCard
@@ -23,6 +24,7 @@ export default function WorkBody(props:WorkBody) {
                                     text={proj.desc}
                                     link={proj.link}
                                     thumbnail={proj.thumbnail}
+                                    isMobile={isMobile}
                                 /> : null;
             return (
                 card
