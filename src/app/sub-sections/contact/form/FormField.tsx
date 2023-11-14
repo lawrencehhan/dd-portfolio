@@ -23,6 +23,7 @@ export default function FormField(props:FormField) {
                 <input 
                     className="formfield-input input-name"
                     type="text"
+                    name="name"
                     onChange={handleFormChange}
                     value={formData.name}
                 />
@@ -34,6 +35,7 @@ export default function FormField(props:FormField) {
                 <input 
                     className="formfield-input input-email"
                     type="text"
+                    name="email"
                     onChange={handleFormChange}
                     value={formData.email}
                 />   
@@ -44,6 +46,7 @@ export default function FormField(props:FormField) {
                 </span>
                 <textarea 
                     className="formfield-input input-message"
+                    name="message"
                     onChange={handleFormChange}
                     value={formData.message}
                 />

@@ -61,13 +61,16 @@ export default function ProjectCard(props:ProjectCard) {
                 }
             }}
             whileHover={{
-                // scale: 0.94,
                 scale: 1.01,
                 border: '20px solid #e8c4c4',
-                // transition: { 
-                //     duration: .4,
-                //     ease: 'easeInOut',
-                // }
+                transition: {
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                }
+            }}
+            whileTap={{
+                scale: .98,
                 transition: {
                     type: "spring",
                     stiffness: 260,

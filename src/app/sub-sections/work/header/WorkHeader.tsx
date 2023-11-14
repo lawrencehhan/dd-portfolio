@@ -6,25 +6,11 @@ import DropDownMenu from './DropDownMenu';
 interface WorkHeader {
     selectedFilter: string;
     handleFilterChange: (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => void;
+    isMobile: boolean;
 }
 
 export default function WorkHeader(props:WorkHeader) {
-    const {selectedFilter, handleFilterChange} = props;
-
-    const [isMobile, setMobile] = useState<boolean>(false)
-    useEffect(() => {
-        // Listening for window resizing
-        if (window.innerWidth <= 1120) {
-        setMobile(true)
-        }
-        window.addEventListener("resize", function() {
-        if (window.innerWidth <= 1120) {
-            setMobile(true)
-        } else {
-            setMobile(false)
-        }
-        })
-    }, [])
+    const {selectedFilter, handleFilterChange, isMobile} = props;
 
     const variants = {
         hover: { 
