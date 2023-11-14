@@ -1,0 +1,75 @@
+.work-page {
+  margin-top: 112px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.work-page .banner {
+  width: 100%;
+  height: 100%;
+}
+.work-page .project-overview {
+  width: 100%;
+  height: 582px;
+  display: flex;
+  border: 1px solid red;
+}
+.work-page .project-overview-col {
+  width: 50%;
+  display: flex;
+  border: 1px solid black;
+}
+.work-page .project-overview-col-thumbnail {
+  justify-content: center;
+  align-items: center;
+}
+.work-page .project-overview-col-text {
+  align-items: center;
+}
+.work-page .project-overview-col-text .sub-title {
+  margin-top: 10px;
+  color: var(--neutrals-500, #515B6C);
+}
+.work-page .project-overview-col-text .body {
+  margin-top: 20px;
+  width: 592px;
+}
+.work-page .project-overview-col-text .btn {
+  margin-top: 27px;
+  height: 40px;
+  width: 161px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2B3A55;
+  color: #F2E5E5;
+  font-family: var(--font-montserrat);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.work-page .project-overview-col-text .btn .btn-link {
+  background-color: #2B3A55;
+  color: #F2E5E5;
+  font-family: var(--font-montserrat);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.work-page .user-research {
+  width: 100%;
+  border: 1px solid green;
+}
+
+/* Tablet and Smaller Desktop */
+
+/*# sourceMappingURL=workPages.css.map */

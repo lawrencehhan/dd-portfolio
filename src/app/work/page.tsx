@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect } from 'react';
-import {motion} from 'framer-motion';
 import { filterOptions } from '../assets/projectData';
 import WorkHeader from '../sub-sections/work/header/WorkHeader';
 import WorkBody from '../sub-sections/work/body/WorkBody';

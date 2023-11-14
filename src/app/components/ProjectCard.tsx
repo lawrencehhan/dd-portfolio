@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Square from './Square';
 import { motion, usePresence } from 'framer-motion';
 
@@ -9,30 +10,17 @@ interface ProjectCard {
     featured: boolean;
     title: string;
     text: string;
+    isMobile: boolean;
     thumbnail?: string;
     link?: string;
 }
 
 export default function ProjectCard(props:ProjectCard) {
-    const {id, title, featured, text, thumbnail} = props;
+    const {id, title, featured, text, thumbnail, isMobile, link} = props;
     // const [isPresent, safeToRemove] = usePresence()
     // useEffect(() => {
     //     !isPresent && setTimeout(safeToRemove, 3000)
     // }, [isPresent])
-    const [isMobile, setMobile] = useState<boolean>(false)
-    useEffect(() => {
-        // Listening for window resizing
-        if (window.innerWidth <= 1120) {
-        setMobile(true)
-        }
-        window.addEventListener("resize", function() {
-        if (window.innerWidth <= 1120) {
-            setMobile(true)
-        } else {
-            setMobile(false)
-        }
-        })
-    }, [])
 
     const cardVariants = {
         hidden: { x: -10, y: -10, opacity: 0 },
@@ -79,7 +67,7 @@ export default function ProjectCard(props:ProjectCard) {
             }}
             variants={cardVariants}
         >
-            <div className="card-thumbnail-container">
+            {/* <div className="card-thumbnail-container">
                 <Image 
                     className='card-thumbnail'
                     src={`/${thumbnail}`}
@@ -87,8 +75,20 @@ export default function ProjectCard(props:ProjectCard) {
                     width={isMobile?266.5:332}
                     height={isMobile?245.6:306}
                 />
+            </div> */}
+            <Link 
+                className="card-thumbnail-container"
+                href={`/work/${link}`}
+            >
+                <Image 
+                    className='card-thumbnail'
+                    src={`/projectImages/${thumbnail}`}
+                    alt={title}
+                    width={isMobile?266.5:332}
+                    height={isMobile?245.6:306}
+                />
                 {/* <Square extraClass='card-thumbnail' color='#C4CEDF' width={isMobile?266.5:332} height={isMobile?245.6:306} animated={false} /> */}
-            </div>
+            </Link>
         </motion.div>
     )
 }

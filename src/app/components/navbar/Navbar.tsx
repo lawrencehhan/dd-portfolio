@@ -90,7 +90,8 @@ export default function Navbar(props:Navbar) {
 
     const pathname = usePathname();
     const links = navLinks.map((link) => {
-            const isActive = pathname === link.href
+            const curLink = `/${pathname.split('/')[1]}`
+            const isActive = curLink === link.href
 
             return (
                 <motion.li  
