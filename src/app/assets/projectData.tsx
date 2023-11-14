@@ -19,7 +19,7 @@ export default function ProjectData() {
                     desc: "Making dining reservatios easier to track for restaurant employees",
                     thumbnail: "bookd_thumbnail.png",
                     tag: ['Design'],
-                    link: "https://www.synestify.com/",
+                    link: "bookd",
                 },
                 {
                     id: 2,
@@ -28,7 +28,7 @@ export default function ProjectData() {
                     desc: "Improving financial literacy from the convenience of your phone",
                     thumbnail: "moneySense_thumbnail.png",
                     tag: ['Design'],
-                    link: "https://www.synestify.com/",
+                    link: "money-sense",
                 },
                 {
                     id: 3,
@@ -37,7 +37,7 @@ export default function ProjectData() {
                     desc: "Streamlining EMRs to improve quality of patient care",
                     thumbnail: "bookd_thumbnail.png",
                     tag: ['Design'],
-                    link: "https://www.synestify.com/",
+                    link: "tracehealth",
                 },
                 {
                     id: 4,
@@ -46,7 +46,7 @@ export default function ProjectData() {
                     desc: "Streamlining EMRs to improve quality of patient care",
                     thumbnail: "ubeBakery_thumbnail.png",
                     tag: ['Development'],
-                    link: "https://www.synestify.com/",
+                    link: "ube-&-sugar-bakery",
                 },
                 {
                     id: 5,
