@@ -18,13 +18,17 @@ $accent-500-dm: #B5C3DC;
     margin-top: 112px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    .full-length { 
+        width: 100%;
+    }
     .banner {
         width: 100%;
         height: 100%;
     }
     .project-overview {
         width: 100%;
-        height: 582px;
+        min-height: 582px;
         display: flex;
         &-col { 
             width: 50%;
@@ -48,7 +52,6 @@ $accent-500-dm: #B5C3DC;
                 margin-top: 20px;
                 width: 592px;
             }
-
             .btn {
                 margin-top: 27px;
                 height: 40px;
@@ -85,10 +88,103 @@ $accent-500-dm: #B5C3DC;
 
         border: 1px solid red;
     }
-    .user-research {
+    .container-accent { 
         width: 100%;
-        border: 1px solid green;
+        background: var(--primary-100, #F2E5E5);
+        display: flex;
+        justify-content: center;
+        .user-research {
+            // width: 83%;
+            width: 1199px;
+            min-height: 445px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            &-col {
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                .title {
+                    color: #000;
+                    width: 533px;
+                }
+                .sub-title {
+                    margin-top: 10px;
+                    width: 533px;
+                    color: var(--neutrals-500, #515B6C);
+                }
+            }
+            &-col-full {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .textbox {
+                    margin-top: 20px;
+                    width: 533px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    &-title {
+                        color: #000;
+                    }
+                    &-body {
+                        margin-top: 10px;
+                        .pain-point {
+                            text-decoration: underline;
+                        }
+                    }
+                    &-pain {
+                        justify-content: flex-start;
+                    }
+                }
+                .textbox-pain {
+                    width: 557px;
+                }
+            } 
+        }
+
     }
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .user-rep {
+            // width: 83%;
+            min-height: 1630px;
+            align-content: center;
+            width: 1199px;
+            display: flex;
+            flex-wrap: wrap;
+            &-col {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                .title {
+                    color: #000;
+                }
+                .sub-title {
+                    margin-top: 10px;
+                    color: var(--neutrals-500, #515B6C);
+                }
+                .mapping-image {
+                    margin-top: 20px;
+                }
+            }
+            .col-images {
+                margin-top: 20px;
+                justify-content: space-between;
+                .imagebox {
+                    &-image {
+                        margin-top: 9px;
+                    }
+                }
+            }
+            .col-mapping {
+                margin-top: 75px;
+            }
+        }
+    }
+    
 }
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {

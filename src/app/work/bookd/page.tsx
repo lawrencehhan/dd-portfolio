@@ -41,7 +41,7 @@ export default function Bookd() {
                 />
             </div>
             <div className="project-overview-col project-overview-col-text">
-            <div className='textbox'>
+                <div className='textbox'>
                     <div className={`${isMobile ? 'text-heading-s' : 'text-heading-l' } title`}>
                         Simplifying Reservations 
                     </div>
@@ -78,8 +78,98 @@ export default function Bookd() {
                 </div>
             </div>
         </div>
-        <div className="user-research">
-            l
+        <div className="container-accent">
+            <div className="user-research">
+                <div className="user-research-col">
+                    <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title full-length`}>
+                        Understanding the users
+                    </div>
+                    <div className={`${isMobile ? 'text-body-s' : 'text-body-xl' } sub-title full-length`}>
+                        User Research
+                    </div>
+                </div>
+                <div className="user-research-col-full">
+                    <div className='textbox'>
+                        <div className='text-heading-xs textbox-title'>
+                            Method
+                        </div>
+                        <div className='text-body-m textbox-body'>
+                            I conducted interviews and created empathy maps to better understand the users and their needs. A primary user group identified during the research was busy restaurant hosts who had more than one role on the staff. This user group confirmed some initial assumptions about restaurant hosts, but further research revealed that time constraints were only part of the causes for finding difficulty with bookkeeping.
+                        </div>
+                    </div>
+                    <div className='textbox textbox-pain'>
+                        <div className='text-heading-xs textbox-title'>
+                            Pain Points
+                        </div>
+                        <ul className='text-body-m textbox-body'>
+                            <li>
+                                <span className='pain-point'>Time</span> — Employees often have multiple to perform roles, such as setting tables and answering phone calls, while guests wait at the entrance for their table
+                            </li>
+                            <li>
+                                <span className='pain-point'>Inconsistency</span> — The amount of information that is noted down for a reservation varies from employee to employee
+                            </li>
+                            <li>
+                                <span className='pain-point'>Legibility</span> — Some employees have a difficult time reading the handwriting of others, which makes it challenging to find reservations quickly
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className='container'>
+            <div className="user-rep">
+                <div className="user-rep-col">
+                    <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title full-length`}>
+                        Representing the user groups
+                    </div>
+                    <div className={`${isMobile ? 'text-body-s' : 'text-body-xl' } sub-title full-length`}>
+                        Personas
+                    </div>
+                </div>
+                <div className="user-rep-col col-images">
+                    <div className='imagebox'>
+                        <div className='text-heading-xs imagebox-title'>
+                            Header
+                        </div>
+                        <Image
+                            className='imagebox-image'
+                            src={'/projectImages/bookd_thumbnail.png'}
+                            alt={'Bookd-Thumbnail'}
+                            width={533}
+                            height={574}
+                        />
+                    </div>
+                    <div className='imagebox'>
+                        <div className='text-heading-xs imagebox-title'>
+                            Header
+                        </div>
+                        <Image
+                            className='imagebox-image'
+                            src={'/projectImages/bookd_thumbnail.png'}
+                            alt={'Bookd-Thumbnail'}
+                            width={533}
+                            height={574}
+                        />
+                    </div>
+                </div>
+                <div className="user-rep-col col-mapping">
+                    <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title full-length`}>
+                        Mapping out the journey
+                    </div>
+                    <div className={`${isMobile ? 'text-body-s' : 'text-body-xl' } sub-title full-length`}>
+                        User Journey
+                    </div>
+                </div>
+                <div className="user-rep-col">
+                    <Image
+                        className='mapping-image'
+                        src={'/projectImages/bookd_mapping.png'}
+                        alt={'Bookd-Mapping'}
+                        width={1199}
+                        height={574}
+                    />
+                </div>
+            </div>
         </div>
     </main>
   )
