@@ -141,7 +141,40 @@ $accent-500-dm: #B5C3DC;
                 }
             } 
         }
-
+        .solution {
+            // width: 83%;
+            width: 1199px;
+            min-height: 819px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            &-col-full {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .title {
+                    color: #000;
+                }
+                .sub-title {
+                    margin-top: 10px;
+                    color: var(--neutrals-500, #515B6C);
+                }
+                .image-textbox {
+                    margin-top: 20px;
+                    width: 533px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    &-title {
+                        color: #000;
+                        margin-top: 20px;
+                    }
+                    &-body {
+                        margin-top: 10px;
+                    }
+                }
+            } 
+        }
     }
     .container {
         width: 100%;
@@ -181,6 +214,64 @@ $accent-500-dm: #B5C3DC;
             }
             .col-mapping {
                 margin-top: 75px;
+            }
+        }
+        .user-needs {
+            // width: 83%;
+            min-height: 1194px;
+            align-content: center;
+            width: 1199px;
+            display: flex;
+            flex-wrap: wrap;
+            &-col {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                .title {
+                    color: #000;
+                }
+                .carousel-title {
+                    margin-top: 75px;
+                }
+                .sub-title {
+                    margin-top: 10px;
+                    color: var(--neutrals-500, #515B6C);
+                }
+                .textbox {
+                    justify-content: flex-start;
+                    width: 970px;
+                    margin-top: 20px;
+                    .list-title {
+                        text-decoration: underline;
+                    }
+                    li {
+                        margin-left: 16px;
+                    }
+                }
+            }
+            &-carousel {
+                justify-content: center;
+                .design-card {
+                    display: flex;
+                    justify-content: center;
+                    gap: 61px;
+                    margin-top: 20px;
+                    border: 1px solid black;
+                    // width: 12px;
+                    .design-mockup-image {
+
+                    }
+                    .textbox {
+                        width: 505px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        &-body {
+                            margin-top: 10px;
+                        }
+                    }
+                }
             }
         }
     }
