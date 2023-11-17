@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import '../workPages.css'
 import Image from 'next/image'
+import DesignCard from '@/app/components/DesignCard'
+import DesignCardData from '@/app/assets/designCardData'
 
 export default function Bookd() {
 
@@ -20,6 +22,18 @@ export default function Bookd() {
         }
         })
     }, [])
+
+    const designCards = DesignCardData().map((data) => {
+        const targetProject = data.designProject === 'bookd'
+        const card = targetProject ? <DesignCard
+                                    id={data.sub_id}
+                                    title={data.title}
+                                    text={data.text}
+                                    image={data.image}
+                                /> : null;
+            return (
+                card
+    )})
    
   return (
     <main className="main work-page bookd">
@@ -169,6 +183,104 @@ export default function Bookd() {
                         height={574}
                     />
                 </div>
+            </div>
+        </div>
+        <div className="container-accent">
+            <div className="solution">
+                <div className="solution-col-full">
+                    <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title full-length`}>
+                        Building an initial solution
+                    </div>
+                    <div className={`${isMobile ? 'text-body-s' : 'text-body-xl' } sub-title full-length`}>
+                        Wireframes & Lo-fi Prototype
+                    </div>
+                </div>
+                <div className="solution-col-full">
+                    <div className='image-textbox'>
+                        <Image 
+                           src={'/projectImages/bookd_wireframe.png'}
+                           alt={'Bookd-Wireframe'}
+                           width={533}
+                           height={410} 
+                        />
+                        <div className='text-heading-xs image-textbox-title'>
+                            Paper Wireframes
+                        </div>
+                        <div className='text-body-m image-textbox-body'>
+                            When iterating on the home screen, I prioritized ease of access and minimalistic design to allow for easy navigation. When choosing the elements to include in the refined version, I opted for elements that were easy to understand and gave quick access to the most-used features.
+                        </div>
+                    </div>
+                    <div className='image-textbox'>
+                        <Image 
+                            src={'/projectImages/bookd_prototype.png'}
+                            alt={'Bookd-Prototype'}
+                            width={533}
+                            height={410}
+                        />
+                        <div className='text-heading-xs image-textbox-title'>
+                            Low-fidelity Prototype
+                        </div>
+                        <div className='text-body-m image-textbox-body'>
+                            Designs included in the digital wireframes prioritized minimalistic elements that allowed users to take common actions quickly and easily. The low-fidelity prototype created in Figma from the digital wireframes focused on the Add Reservation user flow, which is the core feature of the app.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className='container'>
+            <div className="user-needs">
+                <div className="user-needs-col">
+                    <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title full-length`}>
+                        Verifying User Needs
+                    </div>
+                    <div className={`${isMobile ? 'text-body-s' : 'text-body-xl' } sub-title full-length`}>
+                        Usability Testing
+                    </div>
+                    <div className='textbox'>
+                        <div className='text-body-m textbox-body'>
+                                Two rounds of usability studies were conducted – one moderated and one unmoderated. Findings from the first study helped uncover major pain points with the initial design. The second study used a high-fidelity prototype and revealed what elements still needed refinement.
+                            <br></br>
+                            <br></br>
+                            <span className="list-title">
+                                Round 1 Findings
+                            </span>
+                            <br></br>
+                            <br></br>
+                            <ul className='text-body-m textbox-body'>
+                                <li>
+                                    Users wanted to filter information
+                                </li>
+                                <li>
+                                    Users wanted a less cluttered calendar design
+                                </li>
+                                <li>
+                                    Users wanted an edit option
+                                </li>
+                            </ul>
+                            <br></br>
+                            <span className="list-title">
+                                Round 2 Findings
+                            </span>
+                            <br></br>
+                            <br></br>
+                            <ul className='text-body-m textbox-body'>
+                                <li>
+                                    Users were confused by the “Guest Book” label
+                                </li>
+                                <li>
+                                    Users wanted a way to know which guests had arrived or had been seated
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className="user-needs-col user-needs-carousel">
+                    <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title full-length carousel-title`}>
+                        Refining the design
+                    </div>
+                    {designCards}
+                </div>
+                
             </div>
         </div>
     </main>

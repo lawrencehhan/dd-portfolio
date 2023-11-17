@@ -122,6 +122,39 @@
 .work-page .container-accent .user-research-col-full .textbox-pain {
   width: 557px;
 }
+.work-page .container-accent .solution {
+  width: 1199px;
+  min-height: 819px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.work-page .container-accent .solution-col-full {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.work-page .container-accent .solution-col-full .title {
+  color: #000;
+}
+.work-page .container-accent .solution-col-full .sub-title {
+  margin-top: 10px;
+  color: var(--neutrals-500, #515B6C);
+}
+.work-page .container-accent .solution-col-full .image-textbox {
+  margin-top: 20px;
+  width: 533px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.work-page .container-accent .solution-col-full .image-textbox-title {
+  color: #000;
+  margin-top: 20px;
+}
+.work-page .container-accent .solution-col-full .image-textbox-body {
+  margin-top: 10px;
+}
 .work-page .container {
   width: 100%;
   display: flex;
@@ -159,6 +192,59 @@
 }
 .work-page .container .user-rep .col-mapping {
   margin-top: 75px;
+}
+.work-page .container .user-needs {
+  min-height: 1194px;
+  align-content: center;
+  width: 1199px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.work-page .container .user-needs-col {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.work-page .container .user-needs-col .title {
+  color: #000;
+}
+.work-page .container .user-needs-col .carousel-title {
+  margin-top: 75px;
+}
+.work-page .container .user-needs-col .sub-title {
+  margin-top: 10px;
+  color: var(--neutrals-500, #515B6C);
+}
+.work-page .container .user-needs-col .textbox {
+  justify-content: flex-start;
+  width: 970px;
+  margin-top: 20px;
+}
+.work-page .container .user-needs-col .textbox .list-title {
+  text-decoration: underline;
+}
+.work-page .container .user-needs-col .textbox li {
+  margin-left: 16px;
+}
+.work-page .container .user-needs-carousel {
+  justify-content: center;
+}
+.work-page .container .user-needs-carousel .design-card {
+  display: flex;
+  justify-content: center;
+  gap: 61px;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+.work-page .container .user-needs-carousel .design-card .textbox {
+  width: 505px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.work-page .container .user-needs-carousel .design-card .textbox-body {
+  margin-top: 10px;
 }
 
 /* Tablet and Smaller Desktop */
