@@ -133,7 +133,7 @@ export default function Bookd() {
         <div className='container'>
             <div className="user-rep">
                 <div className="user-rep-col">
-                    <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title full-length`}>
+                    <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title title-main full-length`}>
                         Representing the user groups
                     </div>
                     <div className={`${isMobile ? 'text-body-s' : 'text-body-xl' } sub-title full-length`}>
@@ -230,7 +230,7 @@ export default function Bookd() {
         <div className='container'>
             <div className="user-needs">
                 <div className="user-needs-col">
-                    <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title full-length`}>
+                    <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title title-main full-length`}>
                         Verifying User Needs
                     </div>
                     <div className={`${isMobile ? 'text-body-s' : 'text-body-xl' } sub-title full-length`}>
@@ -281,6 +281,163 @@ export default function Bookd() {
                     {designCards}
                 </div>
                 
+            </div>
+        </div>
+        <div className="container-accent">
+            <div className="hi-fi">
+                <div className="hi-fi-col-full">
+                    <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title full-length`}>
+                        Hi-Fidelity Prototype
+                    </div>
+                </div>
+                <div className="hi-fi-col-full">
+                    <div className='image-textbox'>
+                        <Image 
+                           src={'/projectImages/bookd_banner.png'}
+                           alt={'HiFi-Prototype'}
+                           width={1200}
+                           height={576} 
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="container">
+            <div className="brand">
+                <div className="brand-col-full">
+                <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title full-length`}>
+                        Establishing the brand
+                    </div>
+                    <div className={`${isMobile ? 'text-body-s' : 'text-body-xl' } sub-title full-length`}>
+                        Design Kit
+                    </div>
+                </div>
+                <div className="brand-col-full">
+                    <div className={`title full-length secondary-title`}>
+                        Color Palette & UI Elements
+                    </div>
+                    <div className={`${isMobile ? 'text-body-s' : 'text-body-m' } desc`}>
+                        Description . . .
+                    </div>
+                </div>
+                <div className="brand-col-full">
+                    <div className='imagebox-palette'>
+                        <Image 
+                           src={'/projectImages/bookd_mockup_01.png'}
+                           alt={'Palette-Elements'}
+                           width={1200}
+                           height={706}
+                           className='imagebox-image' 
+                        />
+                    </div>
+                </div>
+                <div className="brand-col-full">
+                    <div className={`title full-length secondary-title`}>
+                        Typography
+                    </div>
+                    <div className={`${isMobile ? 'text-body-s' : 'text-body-m' } desc`}>
+                        The goal was to convey simplicity with a modern and clean design. I decided to use the same font for headers, body copy and buttons to provide consistency throughout the app.
+                    </div>
+                </div>
+                <div className="brand-col-full">
+                    <div className='imagebox-typography'>
+                        <Image 
+                           src={'/projectImages/bookd_mockup_02.png'}
+                           alt={'Typography'}
+                           width={1200}
+                           height={405}
+                           className='imagebox-image' 
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="container-accent">
+            <div className="accessibility">
+                <div className="accessibility-col">
+                    <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title full-length`}>
+                        Keeping all users in mind
+                    </div>
+                    <div className={`${isMobile ? 'text-body-s' : 'text-body-xl' } sub-title full-length`}>
+                        Accessibility Considerations
+                    </div>
+                </div>
+                <div className="accessibility-col-full">
+                    <div className='textbox'>
+                        <div className='text-heading-xs textbox-title'>
+                            Dark Mode & Language Support
+                        </div>
+                        <div className='text-body-m textbox-body'>
+                            Added a settings page so that users could change from light to dark mode or change the language used throughout the app.
+                        </div>
+                    </div>
+                    <div className='textbox'>
+                        <div className='text-heading-xs textbox-title'>
+                            Iconography
+                        </div>
+                        <div className='text-body-m textbox-body'>
+                            Used icons to help make navigation and comprehensibility world-wide easier.
+                        </div>
+                    </div>
+                </div>
+                <div className="accessibility-col-full last-col">
+                    <div className='textbox'>
+                        <div className='text-heading-xs textbox-title'>
+                            Contrast
+                        </div>
+                        <div className='text-body-m textbox-body'>
+                            Changed the color palette and included higher contrasting colors to help users with reading difficulties or visual impairments.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="container">
+            <div className="learning">
+                <div className="learning-col">
+                    <div className={`${isMobile ? 'text-heading-s' : 'text-heading-m' } title full-length`}>
+                        Learning by doing
+                    </div>
+                    <div className={`${isMobile ? 'text-body-s' : 'text-body-xl' } sub-title full-length`}>
+                        Takeaway & Next Steps
+                    </div>
+                </div>
+                <div className="learning-col-full">
+                    <div className='textbox'>
+                        <div className='text-heading-xs textbox-title'>
+                            Impact
+                        </div>
+                        <div className='text-body-m textbox-body'>
+                            The app alleviates the stress and time constraints faced by restaurant employees so that they can focus on prioritizing the guest and the guest’s dining experience.
+                        </div>
+                    </div>
+                    <div className='textbox'>
+                        <div className='text-heading-xs textbox-title'>
+                            Next Steps
+                        </div>
+                        <ul className='text-body-m textbox-body'>
+                            <li>
+                                Expand usability study to a wider range of users to reveal any groups that were not accounted for
+                            </li>
+                            <li>
+                                Conduct another unmoderated usability study to verify whether or not the refinements addressed the findings from the second usability study
+                            </li>
+                            <li>
+                                Perform internal reviews to ensure that the app design meets 508 standards and WCAG
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="learning-col-full last-col">
+                    <div className='textbox'>
+                        <div className='text-heading-xs textbox-title'>
+                            Lessons Learned
+                        </div>
+                        <div className='text-body-m textbox-body'>
+                            As I was designing this app, I learned that my interpretation of what a good and useful design is does not necessarily mean that it is the best design for what users need. The end-users’ perceptions are ultimately the most reliable deciding factors for app design.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
