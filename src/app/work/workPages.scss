@@ -28,12 +28,12 @@ $accent-500-dm: #B5C3DC;
     }
     .project-overview {
         width: 100%;
-        min-height: 582px;
         display: flex;
         &-col { 
+            margin-top: 75px;
+            margin-bottom: 75px;
             width: 50%;
             display: flex;
-            border: 1px solid black;
         }
         &-col-thumbnail {
             justify-content: center;
@@ -86,7 +86,6 @@ $accent-500-dm: #B5C3DC;
             }
         }
 
-        border: 1px solid red;
     }
     .container-accent { 
         width: 100%;
@@ -96,7 +95,6 @@ $accent-500-dm: #B5C3DC;
         .user-research {
             // width: 83%;
             width: 1199px;
-            min-height: 445px;
             display: flex;
             flex-wrap: wrap;
             align-content: center;
@@ -106,7 +104,7 @@ $accent-500-dm: #B5C3DC;
                 flex-wrap: wrap;
                 .title {
                     color: #000;
-                    width: 533px;
+                    margin-top: 75px;
                 }
                 .sub-title {
                     margin-top: 10px;
@@ -118,6 +116,7 @@ $accent-500-dm: #B5C3DC;
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+                margin-bottom: 75px;
                 .textbox {
                     margin-top: 20px;
                     width: 533px;
@@ -135,6 +134,9 @@ $accent-500-dm: #B5C3DC;
                     &-pain {
                         justify-content: flex-start;
                     }
+                    li {
+                        margin-left: 16px;
+                    }
                 }
                 .textbox-pain {
                     width: 557px;
@@ -142,9 +144,7 @@ $accent-500-dm: #B5C3DC;
             } 
         }
         .solution {
-            // width: 83%;
             width: 1199px;
-            min-height: 819px;
             display: flex;
             flex-wrap: wrap;
             align-content: center;
@@ -155,6 +155,7 @@ $accent-500-dm: #B5C3DC;
                 justify-content: space-between;
                 .title {
                     color: #000;
+                    margin-top: 75px;
                 }
                 .sub-title {
                     margin-top: 10px;
@@ -162,6 +163,7 @@ $accent-500-dm: #B5C3DC;
                 }
                 .image-textbox {
                     margin-top: 20px;
+                    margin-bottom: 75px;
                     width: 533px;
                     display: flex;
                     flex-wrap: wrap;
@@ -175,14 +177,74 @@ $accent-500-dm: #B5C3DC;
                 }
             } 
         }
+        .hi-fi {
+            width: 1199px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            &-col-full {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                .title {
+                    color: #000;
+                    margin-top: 75px;
+                }
+                .image-textbox {
+                    margin-top: 50px;
+                    margin-bottom: 75px;
+                }
+            }
+        }
+        .accessibility {
+            width: 1199px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            &-col {
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                .title {
+                    color: #000;
+                    margin-top: 75px;
+                }
+                .sub-title {
+                    margin-top: 10px;
+                    width: 533px;
+                    color: var(--neutrals-500, #515B6C);
+                }
+            }
+            &-col-full {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .textbox {
+                    margin-top: 20px;
+                    width: 505px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    &-title {
+                        color: #000;
+                    }
+                    &-body {
+                        margin-top: 10px;
+                        .pain-point {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .last-col {
+                margin-bottom: 75px;
+            } 
+        }
     }
     .container {
         width: 100%;
         display: flex;
         justify-content: center;
         .user-rep {
-            // width: 83%;
-            min-height: 1630px;
             align-content: center;
             width: 1199px;
             display: flex;
@@ -195,18 +257,25 @@ $accent-500-dm: #B5C3DC;
                 .title {
                     color: #000;
                 }
+                .title-main {
+                    margin-top: 75px;
+                }
                 .sub-title {
                     margin-top: 10px;
                     color: var(--neutrals-500, #515B6C);
                 }
                 .mapping-image {
                     margin-top: 20px;
+                    margin-bottom: 75px;
                 }
             }
             .col-images {
                 margin-top: 20px;
                 justify-content: space-between;
                 .imagebox {
+                    &-title {
+                        color: #000;
+                    }
                     &-image {
                         margin-top: 9px;
                     }
@@ -217,8 +286,6 @@ $accent-500-dm: #B5C3DC;
             }
         }
         .user-needs {
-            // width: 83%;
-            min-height: 1194px;
             align-content: center;
             width: 1199px;
             display: flex;
@@ -230,6 +297,9 @@ $accent-500-dm: #B5C3DC;
                 justify-content: flex-start;
                 .title {
                     color: #000;
+                }
+                .title-main {
+                    margin-top: 75px;
                 }
                 .carousel-title {
                     margin-top: 75px;
@@ -252,6 +322,7 @@ $accent-500-dm: #B5C3DC;
             }
             &-carousel {
                 justify-content: center;
+                margin-bottom: 75px;
                 .design-card {
                     display: flex;
                     justify-content: center;
@@ -273,6 +344,92 @@ $accent-500-dm: #B5C3DC;
                     }
                 }
             }
+        }
+        .brand {
+            width: 1199px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            &-col-full {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                .title {
+                    color: #000;
+                    margin-top: 75px;
+                }
+                .secondary-title {
+                    font-family: var(--font-montserrat);
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 33.6px;
+                    margin-top: 20px;
+                }
+                .sub-title {
+                    margin-top: 10px;
+                    color: var(--neutrals-500, #515B6C);
+                }
+                .desc {
+                    margin-top: 10px;
+                    color: #000;
+                    width: 668px;
+                }
+                .imagebox-palette {
+                    margin-top: 63px;
+                    margin-bottom: 55px;
+                }
+                .imagebox-typography {
+                    margin-top: 39px;
+                    margin-bottom: 75px;
+                }
+            } 
+        }
+        .learning {
+            width: 1199px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            &-col {
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                .title {
+                    color: #000;
+                    margin-top: 75px;
+                }
+                .sub-title {
+                    margin-top: 10px;
+                    width: 533px;
+                    color: var(--neutrals-500, #515B6C);
+                }
+            }
+            &-col-full {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                .textbox {
+                    margin-top: 20px;
+                    width: 505px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    &-title {
+                        color: #000;
+                    }
+                    &-body {
+                        margin-top: 10px;
+                        .pain-point {
+                            text-decoration: underline;
+                        }
+                    }
+                    li {
+                        margin-left: 16px;
+                    }
+                }
+            }
+            .last-col {
+                margin-bottom: 75px;
+            } 
         }
     }
     
