@@ -132,6 +132,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  text-decoration: none;
 }
 .page-home .projects-container .projects-col-media .project-card .card-image-container {
   width: 281px;
